@@ -1,0 +1,156 @@
+================================================================================
+  NURSERY RHYME CHANNEL - AGENCY SYSTEM
+  Everything is in this one folder. Start here.
+================================================================================
+
+WHAT THIS IS
+  A complete production system for an AI-assisted children's nursery-rhyme
+  YouTube channel, built so that non-compliant content cannot reach an upload
+  and a human is the final approver at every gate.
+
+  Python 3.8 or newer. Standard library only.
+  No pip install. No virtualenv. No internet needed to run it.
+
+
+--------------------------------------------------------------------------------
+STEP 1 - PUT THE AGENT RULES INTO GROK BOT
+--------------------------------------------------------------------------------
+
+  Open:   AGENT_RULES.md
+
+  Copy the whole file and paste it into Grok Bot as its SYSTEM PROMPT.
+
+  That single file is the agent's operating contract: the seven non-negotiable
+  rules, the five operating rules, and how to refuse a request properly.
+  It is the only file that goes INSIDE Grok. Everything else is what Grok
+  works against.
+
+
+--------------------------------------------------------------------------------
+STEP 2 - CHECK IT RUNS
+--------------------------------------------------------------------------------
+
+  Open a terminal in this folder and run:
+
+      python3 scripts/compliance_gate.py --preflight
+
+  If it prints "Preflight OK" you are ready. If it refuses, it will tell you
+  exactly what is missing or out of date.
+
+
+--------------------------------------------------------------------------------
+STEP 3 - MAKE ONE VIDEO END TO END
+--------------------------------------------------------------------------------
+
+  Full walkthrough with what to check at each gate:   QUICKSTART.md
+
+  The short version:
+
+      python3 scripts/rhyme_generator.py --list
+      python3 scripts/pipeline.py --ref VID-001 --rhyme hickory_dickory --format long
+
+      ... the pipeline STOPS at the human review gate ...
+      ... generate frames in Higgsfield from build/VID-001/video_prompts.json
+      ... review 100% of them against video/frame_review_checklist.md
+      ... complete review/safety_checklist.md
+      ... copy review/gate_signoff.template.json -> build/VID-001/signoff.json
+
+      python3 scripts/pipeline.py --ref VID-001 --package
+      python3 scripts/thumbnail_generator.py --script build/VID-001/script.json
+
+  Then a human uploads, following publishing/youtube_upload_checklist.md
+
+
+--------------------------------------------------------------------------------
+THE DAILY SCHEDULE
+--------------------------------------------------------------------------------
+
+  Cadence is 2 long videos + 2 Shorts every day.
+
+  A full year is already planned for you:
+
+      calendar/calendar-2026-09-03-365d.csv      1,460 dated slots
+
+  Every row has the date, publish time, title, setting, palette, companion,
+  and the exact command to run for that slot.
+
+  To regenerate or extend it:
+
+      python3 scripts/bulk_scheduler.py --capacity
+      python3 scripts/bulk_scheduler.py --days 365 --start YYYY-MM-DD
+
+  EVERY SLOT IS MARKED "PENDING". A calendar slot is a plan, never an approval.
+
+
+--------------------------------------------------------------------------------
+WHAT IS IN EACH FOLDER
+--------------------------------------------------------------------------------
+
+  compliance/   The law. Verbatim COPPA, the FTC COPPA Rule, and the copyright
+                sections that decide public-domain status. Read before anything
+                generates. Re-fetch every 90 days.
+
+  scripts/      Generation, gated. Rhyme scripts, titles, thumbnails, the bulk
+                scheduler, and compliance_gate.py which enforces everything.
+
+  video/        AI prompts, scene templates, and the 100%-of-frames review
+                checklist.
+
+  music/        Clearance tracker. No row, no render.
+
+  review/       THE HUMAN GATE. Safety checklist, quality bar, duplicate
+                detection.
+
+  publishing/   Upload checklist, metadata rules, scheduling rules.
+
+  audit/        Every decision, the change log, and the 90-day policy tracker.
+
+  calendar/     The 365-day production calendar.
+
+
+--------------------------------------------------------------------------------
+THREE THINGS THIS SYSTEM DELIBERATELY WILL NOT DO
+--------------------------------------------------------------------------------
+
+  1. It cannot publish. Nothing touches the YouTube API. A human uploads.
+
+  2. It cannot approve. The pipeline refuses to build a publish package
+     without a named person's sign-off. There is no --force flag.
+
+  3. It cannot review frames for you. That is roughly 12 hours a week at this
+     cadence, and it is the real cost of running at 4 uploads a day.
+
+  These are design decisions, not missing features.
+
+
+--------------------------------------------------------------------------------
+BEFORE YOU RELY ON THIS IN PRODUCTION
+--------------------------------------------------------------------------------
+
+  1. Run this once from a computer with normal internet access:
+
+         python3 compliance/fetch_compliance.py --refresh
+
+     The legal texts were obtained through mirrors because the government
+     sites were blocked when this was built. This verifies them against the
+     official sources.
+
+  2. Replace the placeholder evidence filenames in music/licensing_tracker.csv
+     with your real signed work-for-hire agreements.
+
+  3. Set real publish times in compliance/rules.json from your own analytics.
+     The four times currently in there are placeholders.
+
+  Full detail, including every known limitation, is in audit/CHANGELOG.md.
+
+
+--------------------------------------------------------------------------------
+NOT LEGAL ADVICE
+--------------------------------------------------------------------------------
+
+  This is a working compliance system, not a lawyer. It is built to make the
+  safe path the easy path and to make uncertainty visible rather than silent.
+  Where the stakes are real, do what the agent rules already require: flag it
+  and escalate to qualified counsel. Do not guess.
+
+================================================================================
