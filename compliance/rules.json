@@ -146,8 +146,8 @@
     ]
   },
   "protected_brands_and_characters": {
-    "_comment": "Never generate, name, or visually imitate these. Not exhaustive; when unsure, FLAG.",
-    "entries": [
+    "_comment": "Never generate, name, or visually imitate these. Split by matchability: 'exact' entries are distinctive enough to match case-insensitively and BLOCK. 'ambiguous' entries are ordinary English words that happen to be brands - they match only in capitalised form and only FLAG, because 'a frozen pond' and 'toy cars' are legitimate nursery content and auto-blocking them would train everyone to ignore the gate. Not exhaustive; when unsure, FLAG.",
+    "exact": [
       "Cocomelon",
       "Pinkfong",
       "Baby Shark",
@@ -160,13 +160,25 @@
       "Paw Patrol",
       "Disney",
       "Mickey Mouse",
-      "Frozen",
       "Elsa",
       "Spiderman",
+      "Spider-Man",
       "Sesame Street",
       "Elmo",
+      "Minions",
+      "Pixar",
+      "Nickelodeon",
+      "Teletubbies",
+      "Paddington"
+    ],
+    "ambiguous": [
+      "Frozen",
       "Cars",
-      "Minions"
+      "Brave",
+      "Up",
+      "Encanto",
+      "Moana",
+      "Coco"
     ]
   },
   "thresholds": {

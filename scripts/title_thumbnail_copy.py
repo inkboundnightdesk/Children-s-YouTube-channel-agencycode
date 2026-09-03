@@ -173,8 +173,19 @@ def main():
     for t in accepted_thumbs:
         print(f"  - \"{t['text']}\" ({t['words']} word(s))")
     print(f"\nDESCRIPTION: {desc_res.verdict}")
+
+    # A BLOCK has to stop the run. Logging a refusal and then returning success is worse than
+    # having no gate: the pipeline proceeds and the audit trail claims it was checked.
+    if desc_res.verdict == BLOCK:
+        print("\nBLOCKED - the description failed the compliance gate:\n", file=sys.stderr)
+        print(desc_res.report(), file=sys.stderr)
+        return 2
+    if not accepted_titles:
+        print("\nBLOCKED - every title candidate was rejected by the gate.", file=sys.stderr)
+        return 2
+
     print("\nNext: python3 scripts/pipeline.py --ref " + (args.ref or "<ref>") + " --stage video")
-    return 0
+    return {"PASS": 0, "FLAG": 0, "BLOCK": 2}[desc_res.verdict]
 
 
 if __name__ == "__main__":

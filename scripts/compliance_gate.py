@@ -190,12 +190,24 @@ def scan_text(text, context="copy"):
                 "Remove it. On Made-for-Kids videos these features are disabled anyway, and asking "
                 "children for engagement is exactly what the child-safety policies target.",
             ))
-    for brand in rules["protected_brands_and_characters"]["entries"]:
+    brands = rules["protected_brands_and_characters"]
+    for brand in brands.get("exact", []):
         if _matches(text, brand):
             res.add(Finding(
                 BLOCK, "NN-5", f"{context} names a protected brand or character.",
                 f'matched: "{brand}"',
                 "Use only original characters. Never imitate or name another channel's IP.",
+            ))
+    # Ordinary English words that are also brand titles. Matched only in capitalised form and
+    # only flagged: "a frozen pond" and "toy cars" are legitimate nursery content, and a gate
+    # that blocks those is a gate people learn to route around.
+    for brand in brands.get("ambiguous", []):
+        if re.search(r"\b" + re.escape(brand) + r"\b", text):
+            res.add(Finding(
+                FLAG, "NN-5", f"{context} contains {brand!r}, which is also a protected title.",
+                f'matched: "{brand}" (capitalised)',
+                "Fine as an ordinary word. Confirm it is not referring to the film or franchise, "
+                "and that no artwork imitates it.",
             ))
 
     if re.search(r"\b[\w.+-]+@[\w-]+\.[\w.]+\b", text):
