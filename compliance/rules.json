@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "last_reviewed": "2026-09-03",
+  "review_interval_days": 90,
+  "next_review_due": "2026-12-02",
+  "_comment": "Machine-readable form of the non-negotiable rules. scripts/compliance_gate.py loads this file and refuses any request that violates it. Editing this file is a policy change: log it in audit/CHANGELOG.md with a reason.",
+
+  "non_negotiable": [
+    {
+      "id": "NN-1",
+      "rule": "Every video is labeled 'Made for Kids' in YouTube Studio. No exceptions.",
+      "enforced_by": ["publishing/youtube_upload_checklist.md", "scripts/compliance_gate.py"],
+      "authority": "16 C.F.R. Part 312; YouTube audience-setting requirement",
+      "machine_check": "metadata.made_for_kids === true"
+    },
+    {
+      "id": "NN-2",
+      "rule": "No personalized ads, comments, notifications, or live chat on any video.",
+      "enforced_by": ["publishing/youtube_upload_checklist.md"],
+      "authority": "16 C.F.R. 312.2 (definition of 'collects'); YouTube MFK feature restrictions",
+      "machine_check": "metadata.comments_disabled && !metadata.personalized_ads && !metadata.live_chat"
+    },
+    {
+      "id": "NN-3",
+      "rule": "No mass-production patterns. No near-duplicate uploads, no template farms.",
+      "enforced_by": ["review/duplicate_detection.py", "scripts/batch_ideas.py"],
+      "authority": "YouTube policy on repetitious / mass-produced content",
+      "machine_check": "max_similarity_to_published < 0.55"
+    },
+    {
+      "id": "NN-4",
+      "rule": "All AI output is human-reviewed for warped faces, extra limbs, garbled text, and unsafe or creepy visuals.",
+      "enforced_by": ["review/safety_checklist.md", "video/frame_review_checklist.md"],
+      "authority": "House rule (child-audience safety)",
+      "machine_check": "review.human_reviewer_name && review.frames_reviewed_pct === 100"
+    },
+    {
+      "id": "NN-5",
+      "rule": "Music is public-domain rhymes only, or properly licensed. No famous recorded versions.",
+      "enforced_by": ["music/licensing_tracker.csv", "scripts/compliance_gate.py"],
+      "authority": "17 U.S.C. 102, 106, 302-305",
+      "machine_check": "music.clearance_status === 'CLEARED' && music.evidence_url"
+    },
+    {
+      "id": "NN-6",
+      "rule": "No collecting personal data from children anywhere off-platform.",
+      "enforced_by": ["compliance/ftc-kids-privacy-compliance-plan.md"],
+      "authority": "15 U.S.C. 6502; 16 C.F.R. 312.3-312.5",
+      "machine_check": "no_offplatform_collection === true"
+    },
+    {
+      "id": "NN-7",
+      "rule": "Photorealistic AI content carries the required altered/synthetic-content label. Cartoon-style does not, but still gets the kids setting.",
+      "enforced_by": ["publishing/youtube_upload_checklist.md", "scripts/compliance_gate.py"],
+      "authority": "YouTube altered-or-synthetic-content disclosure requirement",
+      "machine_check": "visual_style === 'photorealistic' ? metadata.altered_content_disclosed === true : true"
+    }
+  ],
+
+  "agent_operating_rules": [
+    "Read every file in compliance/ before generating any content.",
+    "Refuse any request that violates a rule in compliance/.",
+    "Run every script and video prompt through the review/ checklist before it leaves the agent.",
+    "Log every decision in audit/decision_log.csv with date and reason.",
+    "Flag anything uncertain instead of guessing.",
+    "Never auto-publish. A named human passes the review/ gate first."
+  ],
+
+  "banned_in_copy": {
+    "_comment": "Substrings that must never appear in a title, description, thumbnail, or on-screen text. Case-insensitive. Enforced by scripts/compliance_gate.py.",
+    "data_collection": [
+      "subscribe to our newsletter", "sign up", "enter your email", "join our discord",
+      "dm us", "message us", "send us your", "tell us your name", "comment your age",
+      "comment below", "leave a comment", "email us", "contact us at", "whatsapp",
+      "fill out the form", "register at", "create an account"
+    ],
+    "manipulative_or_unsafe": [
+      "you won't believe", "gone wrong", "gone sexual", "24 hour challenge",
+      "do not watch", "banned", "scary", "creepy", "horror", "nightmare",
+      "elsagate", "prank", "kidnap", "blood", "die", "died", "death", "kill",
+      "gun", "knife", "drunk", "pregnant", "injection", "syringe"
+    ],
+    "engagement_bait": [
+      "like and subscribe", "smash that like", "hit the bell", "notification bell",
+      "turn on notifications", "share this video", "click here", "link in bio",
+      "link in description", "giveaway", "free gift"
+    ]
+  },
+
+  "protected_brands_and_characters": {
+    "_comment": "Never generate, name, or visually imitate these. Not exhaustive; when unsure, FLAG.",
+    "entries": [
+      "Cocomelon", "Pinkfong", "Baby Shark", "Little Baby Bum", "Super Simple Songs",
+      "Blippi", "Ms Rachel", "Peppa Pig", "Bluey", "Paw Patrol", "Disney", "Mickey Mouse",
+      "Frozen", "Elsa", "Spiderman", "Sesame Street", "Elmo", "Cars", "Minions"
+    ]
+  },
+
+  "thresholds": {
+    "duplicate_similarity_block": 0.55,
+    "duplicate_similarity_flag": 0.40,
+    "min_frames_reviewed_pct": 100,
+    "max_videos_per_week": 3,
+    "min_hours_between_uploads": 36,
+    "policy_refresh_days": 90
+  }
+}

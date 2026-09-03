@@ -1,0 +1,37 @@
+{
+  "_instructions": [
+    "Copy this file to build/<REF>/signoff.json, fill it in, and save it.",
+    "scripts/pipeline.py --package refuses to build a publish package without it.",
+    "human_reviewer_name must be a real person. 'The pipeline checked it' is not a reviewer.",
+    "frames_reviewed_pct must be exactly 100. NN-4 has no sampling clause.",
+    "Signing this while any box in safety_checklist.md is unticked is the one failure mode this whole",
+    "system cannot catch for you."
+  ],
+
+  "ref": "VID-2026-XXX",
+  "human_reviewer_name": "",
+  "reviewed_on": "2026-XX-XX",
+
+  "frames_generated": 0,
+  "frames_reviewed": 0,
+  "frames_reviewed_pct": 0,
+  "frames_rejected": 0,
+
+  "frame_checklist_passed": false,
+  "safety_checklist_passed": false,
+  "quality_bar_passed": false,
+
+  "chosen_title": "",
+  "chosen_thumbnail_text": "",
+
+  "scheduling": {
+    "videos_this_week": 1,
+    "hours_since_last_upload": 72
+  },
+
+  "flags_raised": [],
+  "flags_resolved_by": "",
+  "notes": "",
+
+  "attestation": "I reviewed 100% of the generated frames myself, completed the safety checklist and the quality bar, and I am glad for a parent to watch this over their child's shoulder."
+}
