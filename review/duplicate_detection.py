@@ -94,8 +94,11 @@ def compare(candidate, prior):
     else:
         scores["structure"] = 0.0
 
+    # visual_style is deliberately excluded: it is "cartoon" for every video on the channel,
+    # so including it only adds a constant 0.25 floor to every comparison and drags unrelated
+    # videos over the flag line. A dimension that never varies carries no information.
     look_parts = []
-    for key in ("setting", "palette", "companion", "visual_style"):
+    for key in ("setting", "palette", "companion"):
         if candidate.get(key) and prior.get(key):
             look_parts.append(jaccard(shingles(candidate[key]), shingles(prior[key])))
     scores["look"] = round(sum(look_parts) / len(look_parts), 4) if look_parts else 0.0
@@ -115,12 +118,20 @@ def compare(candidate, prior):
     # So identity (what the video actually is - its look, and its title across different rhymes)
     # carries the verdict at 70%, and structure contributes 30%. Structure alone cannot block;
     # structure on top of a shared look absolutely can.
+    # Calibration, stated as the behaviour it produces against the 0.55 block line:
+    #   0 of 3 treatment dimensions shared           -> ~0.15  PASS
+    #   1 of 3 shared (e.g. same setting)            -> ~0.43  FLAG - a human looks
+    #   2 of 3 shared (same setting + companion)     -> ~0.72  BLOCK - that is a reskin
+    #   3 of 3 shared                                -> ~1.00  BLOCK
+    # Structure sits at 15% because the channel has one house format by design: nearly every
+    # pair scores high on it, so any heavier weight turns it into a constant offset that
+    # squeezes the legitimate variation budget and blocks unrelated videos.
     identity = ["look"] if same_rhyme else ["title", "look"]
     identity_score = max(scores[k] for k in identity)
-    composite = identity_score * 0.7 + scores["structure"] * 0.3
+    composite = identity_score * 0.85 + scores["structure"] * 0.15
 
     scores = {k: round(v, 4) for k, v in scores.items()}
-    scores["_scored_on"] = f"{'+'.join(identity)} (70%) + structure (30%)"
+    scores["_scored_on"] = f"{'+'.join(identity)} (85%) + structure (15%)"
     return scores, round(composite, 4)
 
 

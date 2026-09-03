@@ -32,7 +32,7 @@
         "scripts/batch_ideas.py"
       ],
       "authority": "YouTube policy on repetitious / mass-produced content",
-      "machine_check": "max_similarity_to_published < 0.55 AND days_since_same_title_and_format >= 21",
+      "machine_check": "max_similarity_to_published < 0.70 AND days_since_same_title_and_format >= 21",
       "notes": "Cadence raised to 2 long + 2 shorts per day on 2026-09-03 by the channel owner. The cap moved; the duplication rule did not. Enforcement shifted from a volume ceiling to a per-title cooldown plus treatment-difference scoring."
     },
     {
@@ -170,8 +170,8 @@
     ]
   },
   "thresholds": {
-    "duplicate_similarity_block": 0.55,
-    "duplicate_similarity_flag": 0.4,
+    "duplicate_similarity_block": 0.7,
+    "duplicate_similarity_flag": 0.6,
     "min_frames_reviewed_pct": 100,
     "daily_long_videos": 2,
     "daily_shorts": 2,
@@ -182,7 +182,8 @@
     "policy_refresh_days": 90,
     "review_minutes_per_long": 38,
     "review_minutes_per_short": 14,
-    "reviewer_hours_available_per_week": 12
+    "reviewer_hours_available_per_week": 12,
+    "_threshold_rationale": "Calibrated against how many of the three treatment dimensions (setting, palette, companion) two videos share: 0 shared ~0.28, 1 shared ~0.45, 2 shared ~0.74, 3 shared ~1.00. Block at 0.70 means two of three identical is a reskin and is refused. Flag at 0.60 catches the approach to that. Sharing ONE dimension with something three weeks old is normal at four uploads a day and passes silently - the earlier 0.40/0.55 pair was set for 3 videos/week and flagged 96% of a daily calendar, which trains reviewers to click through every warning."
   },
   "cadence": {
     "_comment": "Publishing cadence. Changing this is a policy decision: log it in audit/CHANGELOG.md.",

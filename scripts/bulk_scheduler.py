@@ -38,7 +38,50 @@ sys.path.insert(0, str(ROOT / "review"))
 
 import audit_log
 from compliance_gate import ComplianceError, load_rules, preflight
-from rhyme_generator import COMPANIONS, PALETTES, SETTINGS, load_library
+from rhyme_generator import COMPANIONS, PALETTES, SETTINGS, load_library, short_shape
+
+
+def lru_pick(pool, seen, k):
+    """Least-recently-used option, so each dimension gets the widest possible spacing."""
+    choice = min(pool, key=lambda x: seen.get(x, -10**9))
+    seen[choice] = k
+    return choice
+
+
+def validate(slots, window_days=30):
+    """Score the calendar against its own duplicate gate before anyone works from it.
+
+    A calendar that fails at the gate is worse than no calendar: the work is done before the
+    refusal arrives. So the scheduler checks its own output the way the pipeline will.
+    """
+    import itertools
+    sys.path.insert(0, str(ROOT / "review"))
+    from duplicate_detection import compare
+
+    items = [dict(s, scenes=[{"kind": k} for k in s["planned_scenes"]],
+                  runtime_s=s["planned_runtime_s"],
+                  _d=dt.date.fromisoformat(s["publish_date"])) for s in slots]
+
+    th = load_rules()["thresholds"]
+    block_at = th["duplicate_similarity_block"]
+    flag_at = th["duplicate_similarity_flag"]
+    blocks, flags, worst = [], 0, (0.0, None, None)
+    for a, b in itertools.combinations(items, 2):
+        gap = abs((a["_d"] - b["_d"]).days)
+        if gap > window_days:
+            continue
+        _, score = compare(a, b)
+        if score > worst[0]:
+            worst = (score, a["ref"], b["ref"])
+        if score >= block_at:
+            blocks.append({"a": a["ref"], "b": b["ref"], "days_apart": gap,
+                           "score": round(score, 3)})
+        elif score >= flag_at:
+            flags += 1
+    return {"window_days": window_days, "thresholds": {"flag": flag_at, "block": block_at},
+            "would_block": len(blocks), "would_flag": flags,
+            "worst_score": round(worst[0], 3), "worst_pair": [worst[1], worst[2]],
+            "examples": blocks[:5]}
 
 
 def usable(lib, fmt):
@@ -107,6 +150,7 @@ def plan(days, start, seed):
     cooldown = th["title_cooldown_days"]
     last_used = {}          # (rhyme_id, fmt) -> date last scheduled
     cursors = {"long": 0, "short": 0}
+    seen = {"setting": {}, "palette": {}, "companion": {}}
     slots, skipped = [], []
 
     times = cad["publish_times_utc"]
@@ -131,11 +175,28 @@ def plan(days, start, seed):
                 continue
             last_used[(chosen["id"], fmt)] = day
 
-            # treatment rotates independently of title so repeats never look alike
-            k = day_i * len(times) + slot_i
-            setting = SETTINGS[(k * 3 + 1) % len(SETTINGS)]
-            palette = PALETTES[(k * 5 + 2) % len(PALETTES)]
-            companion = COMPANIONS[(k * 7 + 3) % len(COMPANIONS)]
+            # Treatment is assigned least-recently-used per dimension, not by modular
+            # stepping. Fixed steps made the three dimensions cycle in lockstep, so the whole
+            # triple recurred on a short period and unrelated rhymes landed in identical
+            # worlds - a reskin, which is precisely what NN-3 blocks. LRU maximises the gap on
+            # each dimension, and the pool sizes (24/17/19) are pairwise coprime so the triple
+            # cannot realign for 7,752 slots (~5.3 years).
+            k = len(slots)
+            setting = lru_pick(SETTINGS, seen["setting"], k)
+            palette = lru_pick(PALETTES, seen["palette"], k)
+            companion = lru_pick(COMPANIONS, seen["companion"], k)
+
+            # Plan the shape here so the calendar is authoritative and self-validation is exact.
+            shape_seed = (k * 37 + chosen["verses"] * 11) % 97
+            if fmt == "short":
+                kinds, durs = short_shape(chosen["verses"], shape_seed)
+            else:
+                extra = 1 if shape_seed % 3 == 0 else 0          # some get a story beat
+                kinds = (["open"] + ["verse"] * chosen["verses"]
+                         + (["story"] if extra else []) + ["learn", "reprise", "close"])
+                base = 10 + chosen["verses"] * 22 + 18 + 22 + 8
+                durs = [base + (45 if extra else 0) + (shape_seed % 11) - 5]
+            runtime = sum(durs) if fmt == "short" else durs[0]
 
             ref = f"{'VID' if fmt != 'short' else 'SHT'}-{day.strftime('%Y%m%d')}-{slot_i+1}"
             slots.append({
@@ -153,6 +214,8 @@ def plan(days, start, seed):
                 "palette": palette,
                 "companion": companion,
                 "visual_style": "cartoon",
+                "planned_scenes": kinds,
+                "planned_runtime_s": runtime,
                 "status": "PENDING",
                 "review_state": "NOT_STARTED",
                 "approved_by": "",
@@ -160,7 +223,10 @@ def plan(days, start, seed):
                                  f"--rhyme {chosen['id']} --format {fmt}"),
             })
 
+    validation = validate(slots)
+
     return {
+        "validation": validation,
         "generated_on": dt.date.today().isoformat(),
         "start": start.isoformat(),
         "days": days,
@@ -246,6 +312,17 @@ def main():
         print(f"  {fmt:<6} pool={c['pool']:<4} needed={c['required_titles']:<4} headroom={c['headroom']}")
     for w in cap["warnings"]:
         print(f"  ! {w}")
+
+    v = batch["validation"]
+    print(f"\nSELF-VALIDATION  (every pair within {v['window_days']} days, scored by the real gate; "
+          f"flag>={v['thresholds']['flag']} block>={v['thresholds']['block']})")
+    print(f"  would BLOCK : {v['would_block']}")
+    print(f"  would FLAG  : {v['would_flag']}")
+    print(f"  worst pair  : {v['worst_score']}  {' vs '.join(x for x in v['worst_pair'] if x)}")
+    if v["would_block"]:
+        print("  ! This calendar contains slots the duplicate gate will refuse. Fix before working it.")
+        for e in v["examples"]:
+            print(f"      {e['score']}  {e['a']} vs {e['b']}  ({e['days_apart']}d apart)")
 
     print(f"\nHUMAN REVIEW LOAD - this is the real constraint")
     print(f"  {rl['hours_per_day']} h/day  =  {rl['hours_per_week']} h/week"

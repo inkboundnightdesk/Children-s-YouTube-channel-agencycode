@@ -74,7 +74,6 @@ PALETTES = [
     "pine green, copper, bone",
     "mauve, straw, dove grey",
     "seafoam, coral, linen",
-    "amber, charcoal, cream",
 ]
 
 COMPANIONS = [
@@ -96,6 +95,7 @@ COMPANIONS = [
     "a friendly goose in a straw hat",
     "a small striped bumblebee with tired wings",
     "a soft grey seal pup with wide eyes",
+    "a small brown wren with a bright eye",
 ]
 
 
@@ -142,22 +142,40 @@ FORMATS = {
 }
 
 
+def short_shape(verses, seed):
+    """Scene kinds and durations for a Short, varied deterministically.
+
+    Every Short having the same 3-scene / 28-second shape makes structure similarity 1.00 for
+    every pair, which eats 30% of the duplicate score as a constant and leaves almost no room
+    for legitimate variation in look. Varying it is both better craft and what keeps the
+    duplicate gate usable at four uploads a day.
+    """
+    n_verse = 1 if verses <= 2 else 2
+    hook_d = 4 + (seed % 3)          # 4-6s
+    verse_d = 15 + (seed % 8)        # 15-22s
+    close_d = 5 + ((seed // 3) % 4)  # 5-8s
+    kinds = ["hook"] + ["verse"] * n_verse + ["loop_close"]
+    durs = [hook_d] + [verse_d, max(12, verse_d - 4)][:n_verse] + [close_d]
+    return kinds, durs
+
+
 def build_short(rhyme, setting, palette, companion, seed):
     """A Short is not a trimmed long video. Vertical, one idea, no wind-up, loopable."""
-    scenes = [
-        {"n": 1, "kind": "hook", "duration_s": 4,
-         "visual": f"Vertical 9:16. Straight into the action in {setting.split(' with ')[0]}. "
-                   f"{companion.capitalize()} already mid-motion, centred in the upper two thirds.",
-         "narration": "[SUNG] Opening line, no wind-up.", "on_screen_text": rhyme["title"]},
-        {"n": 2, "kind": "verse", "duration_s": 18,
-         "visual": "Vertical 9:16. One continuous action, subject centred and large. "
-                   "Nothing in the lower fifth - the UI covers it.",
-         "narration": "[SUNG] The single strongest verse.", "on_screen_text": ""},
-        {"n": 3, "kind": "loop_close", "duration_s": 6,
-         "visual": "Vertical 9:16. Return to the exact opening framing so the loop is seamless.",
-         "narration": "[SUNG] Final phrase, landing on the opening beat.", "on_screen_text": ""},
-    ]
-    return scenes
+    kinds, durs = short_shape(rhyme["verses"], seed)
+    text = [rhyme["title"]] + [""] * (len(kinds) - 1)
+    visual = {
+        "hook": f"Vertical 9:16. Straight into the action in {setting.split(' with ')[0]}. "
+                f"{companion.capitalize()} already mid-motion, centred in the upper two thirds.",
+        "verse": "Vertical 9:16. One continuous action, subject centred and large. "
+                 "Nothing in the lower fifth - the UI covers it.",
+        "loop_close": "Vertical 9:16. Return to the exact opening framing so the loop is seamless.",
+    }
+    narr = {"hook": "[SUNG] Opening line, no wind-up.",
+            "verse": "[SUNG] The strongest verse.",
+            "loop_close": "[SUNG] Final phrase, landing on the opening beat."}
+    return [{"n": i + 1, "kind": k, "duration_s": d, "visual": visual[k],
+             "narration": narr[k], "on_screen_text": text[i]}
+            for i, (k, d) in enumerate(zip(kinds, durs))]
 
 
 def build_script(rhyme, setting, palette, companion, seed, fmt="long"):
