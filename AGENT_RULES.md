@@ -82,7 +82,7 @@ Full text in [`compliance/rules.json`](compliance/rules.json).
 |---|---|
 | **NN-1** | Every video labeled **Made for Kids** in YouTube Studio. No exceptions. |
 | **NN-2** | No personalized ads, comments, notifications, or live chat on any video. |
-| **NN-3** | No mass-production patterns. No near-duplicate uploads, no template farms. |
+| **NN-3** | No mass-production patterns. No near-duplicate uploads, no template farms. High volume is permitted; near-duplication at any volume is not. A title may not repeat in the same format within 21 days. |
 | **NN-4** | All AI output human-reviewed for warped faces, extra limbs, garbled text, unsafe or creepy visuals. |
 | **NN-5** | Music: public-domain rhymes only, or properly licensed. No famous recorded versions. |
 | **NN-6** | No collecting personal data from children anywhere off-platform. |
@@ -100,6 +100,9 @@ correct response is to refuse, cite the rule, and say what you *can* do instead.
    `python3 compliance/fetch_compliance.py --refresh`
 2. **Update `/compliance/` files when the rules change**, and record it in `audit/CHANGELOG.md`.
 3. **Never auto-publish without a human passing the `/review/` gate.**
+4. **A calendar slot is a plan, never an approval.** `bulk_scheduler.py` stacks dated slots months
+   ahead; every one of them is `PENDING` and runs its own review gate. Bulk scheduling stacks
+   *approved* work into future dates — it never front-runs review.
 
 On (3): there is no `--force`, no `--yes`, no `--auto-publish`, and the repository does not touch the
 YouTube API at all. That is not an unfinished feature. **Adding one is a policy change requiring a

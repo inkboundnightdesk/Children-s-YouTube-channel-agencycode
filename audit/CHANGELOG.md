@@ -8,6 +8,57 @@ Format: `## YYYY-MM-DD — <what changed>` with **what**, **why**, and **who**.
 
 ---
 
+## 2026-09-03 — Cadence raised to 4/day; Shorts, thumbnails and bulk scheduling added
+
+**What:** Publishing cadence changed from 3 videos/week to **2 long videos + 2 Shorts per day,
+indefinitely**. Shorts and story-cartoon formats added. Thumbnail generation and bulk calendar
+scheduling added. Rhyme library expanded from 8 verified titles to 48.
+
+**Why:** Channel owner's decision. Generation capacity is covered by a Higgsfield AI Premium annual
+subscription, so the previous weekly cap was no longer the binding constraint on output.
+
+**Who:** channel owner (policy); implemented by the agency system
+
+**Impact:**
+
+- `compliance/rules.json` — `max_videos_per_week` 3 → 28; `min_hours_between_uploads` 36 → 4; new
+  `cadence` block; new `title_cooldown_days: 21`; new review-capacity model.
+- **NN-3 was NOT weakened.** Its wording now reads "High volume is permitted; near-duplication at any
+  volume is not." The volume ceiling was replaced by a sharper mechanism, not removed:
+  - a hard 21-day cooldown on the same title in the same format, regardless of treatment
+  - same-rhyme comparisons rescored to judge *treatment* (structure, look) rather than the fact of
+    reusing a rhyme — the old scoring blocked any reuse forever, which capped lifetime output at ~96
+    videos and was unworkable at this cadence
+  - Short vs long treated as different products, but a straight reskin across formats still blocks
+- `scripts/rhyme_library.json` — 8 → 52 entries (48 verified, 4 flagged). All PD basis cited to a
+  printed source before 1930.
+- `music/licensing_tracker.csv` — regenerated, 52 rows, 48 CLEARED.
+- New: `scripts/bulk_scheduler.py`, `scripts/thumbnail_generator.py`, `video/shorts_template.md`.
+- `scripts/rhyme_generator.py` — `--format long|short|cartoon`.
+
+**Constraints recorded honestly — neither is solved, both are now measured:**
+
+1. **Content supply is tight.** A 21-day cooldown at 2/day/format needs 42 distinct titles per format.
+   We have 48 long / 46 short — **6 and 4 titles of headroom.** One clearance failing takes a title out
+   of rotation and the calendar starts leaving gaps. `bulk_scheduler.py --capacity` reports this and
+   warns at ≤6. Verifying new titles is now ongoing work, and widening `content_type` beyond `rhyme`
+   (counting, alphabet, colours/shapes, seasonal, original story cartoons) buys headroom faster than
+   verifying more rhymes.
+
+2. **Human review is the real bottleneck — 12.1 h/week, forever.** NN-4 requires 100% frame review and
+   was not touched. At 4/day that is ~104 min/day. This is a part-time job and it is not optional.
+   The scheduler prints the load on every run and compares it to `reviewer_hours_available_per_week`.
+   The three honest responses to a shortfall are: add reviewers, lower the cadence, or shorten
+   runtimes. Sampling frames is not among them.
+
+**Follow-up:**
+
+- Set real `publish_times_utc` from channel analytics — the current four are placeholders.
+- Keep verifying public-domain titles; headroom under 6 is a scheduling risk.
+- Re-check Higgsfield's commercial-use terms at each 90-day compliance review and save a dated capture.
+
+---
+
 ## 2026-09-03 — Agency system created
 
 **What:** Initial build of the complete agency system: compliance corpus, generation scripts, review gates,

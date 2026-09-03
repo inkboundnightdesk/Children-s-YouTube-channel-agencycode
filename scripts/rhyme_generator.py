@@ -38,7 +38,24 @@ SETTINGS = [
     "a riverbank where willows dip into slow water",
     "a friendly red barn at the edge of a green field",
     "a bright attic room full of soft toys and books",
+    "a windmill on a low hill with long grass",
+    "a duck pond ringed with smooth grey stones",
+    "an orchard of short apple trees in soft afternoon light",
+    "a lighthouse keeper's cottage above a calm bay",
+    "a market square with striped awnings, early morning",
+    "a mossy woodland clearing with dappled sunlight",
+    "a sandy cove with gentle waves and rock pools",
+    "a greenhouse full of seedlings and watering cans",
+    "a bakery window with warm light and round loaves",
+    "a wildflower field with a low stone wall",
+    "a train platform in a tiny country station",
+    "a hillside sheep pasture under drifting clouds",
+    "a cobbled lane with window boxes and a blue door",
+    "a frozen pond with soft snow on the reeds",
+    "a rope bridge over a shallow, sunny stream",
+    "a hay loft with warm light through the slats",
 ]
+
 PALETTES = [
     "deep indigo, soft gold, cream",
     "sage green, warm terracotta, oat",
@@ -46,7 +63,20 @@ PALETTES = [
     "plum, mustard, soft grey",
     "forest green, cream, honey",
     "lavender, mint, warm white",
+    "soft teal, apricot, ivory",
+    "clay pink, olive, sand",
+    "midnight blue, silver, pale rose",
+    "moss green, butter yellow, chalk",
+    "russet, cream, slate blue",
+    "periwinkle, peach, warm grey",
+    "deep plum, sage, oatmeal",
+    "denim blue, wheat, soft white",
+    "pine green, copper, bone",
+    "mauve, straw, dove grey",
+    "seafoam, coral, linen",
+    "amber, charcoal, cream",
 ]
+
 COMPANIONS = [
     "a small round owl with speckled feathers",
     "a patient grey donkey with long ears",
@@ -54,7 +84,44 @@ COMPANIONS = [
     "a slow, cheerful tortoise",
     "a fluffy duckling who hums along",
     "a gentle brown bear cub",
+    "a shy grey rabbit with one folded ear",
+    "a tidy badger with round spectacles",
+    "a sleepy orange cat with a bell",
+    "a small red fox with a white-tipped tail",
+    "a woolly lamb with a crooked fringe",
+    "a bright green frog in wellington boots",
+    "a plump robin with a red waistcoat",
+    "a spotted puppy with oversized paws",
+    "a quiet grey mouse with a patchwork bag",
+    "a friendly goose in a straw hat",
+    "a small striped bumblebee with tired wings",
+    "a soft grey seal pup with wide eyes",
 ]
+
+
+def recent_treatments(limit=40):
+    """Setting/palette/companion used by the most recent published items.
+
+    At 4 uploads a day, picking a treatment at random collides with something recent almost
+    immediately - and a different rhyme in an identical world is a reskin, which is exactly what
+    NN-3 blocks. So the generator avoids what is already on the shelf rather than discovering
+    the collision at the duplicate gate.
+    """
+    idx = ROOT / "audit" / "published_index.json"
+    if not idx.exists():
+        return {"setting": set(), "palette": set(), "companion": set()}
+    try:
+        pub = json.loads(idx.read_text(encoding="utf-8")).get("published", [])
+    except (ValueError, OSError):
+        return {"setting": set(), "palette": set(), "companion": set()}
+    pub = pub[-limit:]
+    return {k: {p.get(k) for p in pub if p.get(k)} for k in ("setting", "palette", "companion")}
+
+
+def pick(pool, used, rnd):
+    """Prefer something not recently used; fall back to the full pool if all are taken."""
+    fresh = [x for x in pool if x not in used]
+    return rnd.choice(fresh if fresh else pool)
 
 
 def load_library():
@@ -68,10 +135,49 @@ def find_rhyme(lib, rid):
     raise SystemExit(f"No rhyme with id {rid!r}. Run --list to see what is available.")
 
 
-def build_script(rhyme, setting, palette, companion, seed):
+FORMATS = {
+    "long":    {"aspect": "16:9", "target_s": (90, 150), "label": "long-form video"},
+    "short":   {"aspect": "9:16", "target_s": (20, 55),  "label": "YouTube Short (vertical)"},
+    "cartoon": {"aspect": "16:9", "target_s": (150, 300), "label": "story cartoon"},
+}
+
+
+def build_short(rhyme, setting, palette, companion, seed):
+    """A Short is not a trimmed long video. Vertical, one idea, no wind-up, loopable."""
+    scenes = [
+        {"n": 1, "kind": "hook", "duration_s": 4,
+         "visual": f"Vertical 9:16. Straight into the action in {setting.split(' with ')[0]}. "
+                   f"{companion.capitalize()} already mid-motion, centred in the upper two thirds.",
+         "narration": "[SUNG] Opening line, no wind-up.", "on_screen_text": rhyme["title"]},
+        {"n": 2, "kind": "verse", "duration_s": 18,
+         "visual": "Vertical 9:16. One continuous action, subject centred and large. "
+                   "Nothing in the lower fifth - the UI covers it.",
+         "narration": "[SUNG] The single strongest verse.", "on_screen_text": ""},
+        {"n": 3, "kind": "loop_close", "duration_s": 6,
+         "visual": "Vertical 9:16. Return to the exact opening framing so the loop is seamless.",
+         "narration": "[SUNG] Final phrase, landing on the opening beat.", "on_screen_text": ""},
+    ]
+    return scenes
+
+
+def build_script(rhyme, setting, palette, companion, seed, fmt="long"):
     """Build the script structure. Deliberately contains NO call to action of any kind."""
     rnd = random.Random(seed)
     title_word = rhyme["title"]
+
+    if fmt == "short":
+        scenes = build_short(rhyme, setting, palette, companion, seed)
+        return {
+            "rhyme_id": rhyme["id"], "rhyme_title": rhyme["title"], "format": "short",
+            "aspect": "9:16", "pd_basis": rhyme["pd_basis"], "pd_source": rhyme["source"],
+            "setting": setting, "palette": palette, "companion": companion,
+            "mood": rhyme["mood"], "tempo": rhyme["tempo"],
+            "learning_hook": rhyme["learning_hook"], "visual_style": "cartoon", "seed": seed,
+            "runtime_s": sum(s["duration_s"] for s in scenes), "scenes": scenes,
+            "no_call_to_action": True,
+            "_note": "Vertical Short. Keep the lower fifth of frame clear - YouTube's UI covers it. "
+                     "Built to loop: the close returns to the opening framing.",
+        }
 
     scenes = []
     scenes.append({
@@ -87,6 +193,15 @@ def build_script(rhyme, setting, palette, companion, seed):
                       f"{companion.capitalize()} joins in the motion. Camera moves slowly, no fast cuts.",
             "narration": f"[SUNG] Verse {v} of {title_word}.",
             "on_screen_text": f"Verse {v}",
+        })
+    if fmt == "cartoon":
+        scenes.append({
+            "n": len(scenes) + 1, "kind": "story", "duration_s": 45,
+            "visual": f"A short original story beat in {setting.split(' with ')[0]}: "
+                      f"{companion} meets a small, gentle problem and solves it kindly. "
+                      f"No peril, no antagonist, no distress.",
+            "narration": "[SPOKEN] Original narration - not part of the rhyme.",
+            "on_screen_text": "",
         })
     scenes.append({
         "n": len(scenes) + 1, "kind": "learn", "duration_s": 18,
@@ -119,6 +234,8 @@ def build_script(rhyme, setting, palette, companion, seed):
         "tempo": rhyme["tempo"],
         "learning_hook": rhyme["learning_hook"],
         "visual_style": "cartoon",
+        "format": fmt,
+        "aspect": FORMATS[fmt]["aspect"],
         "seed": seed,
         "runtime_s": sum(s["duration_s"] for s in scenes),
         "scenes": scenes,
@@ -134,6 +251,8 @@ def main():
     ap.add_argument("--rhyme", help="rhyme id from the library")
     ap.add_argument("--setting"); ap.add_argument("--palette"); ap.add_argument("--companion")
     ap.add_argument("--seed", type=int, default=None)
+    ap.add_argument("--format", choices=["long", "short", "cartoon"], default="long",
+                    help="long-form video, vertical Short, or story cartoon")
     ap.add_argument("--ref", default="", help="project reference for the audit log, e.g. VID-2026-001")
     ap.add_argument("--out", default="build", help="output directory")
     args = ap.parse_args()
@@ -175,11 +294,22 @@ def main():
 
     seed = args.seed if args.seed is not None else abs(hash(rhyme["id"] + (args.setting or ""))) % 100000
     rnd = random.Random(seed)
-    setting = args.setting or rnd.choice(SETTINGS)
-    palette = args.palette or rnd.choice(PALETTES)
-    companion = args.companion or rnd.choice(COMPANIONS)
+    used = recent_treatments()
+    setting = args.setting or pick(SETTINGS, used["setting"], rnd)
+    palette = args.palette or pick(PALETTES, used["palette"], rnd)
+    companion = args.companion or pick(COMPANIONS, used["companion"], rnd)
 
-    script = build_script(rhyme, setting, palette, companion, seed)
+    if args.format not in rhyme.get("formats", ["long", "short"]):
+        print(f"BLOCKED - {rhyme['title']!r} is not approved for format {args.format!r} "
+              f"(allowed: {rhyme.get('formats')}).\n"
+              f"Lullabies in particular are long-form only: a 20-second lullaby is not a lullaby.",
+              file=sys.stderr)
+        audit_log.log_decision("script", "BLOCK",
+                               f"Format {args.format!r} not allowed for {rhyme['id']!r}.",
+                               actor="rhyme_generator", ref=args.ref)
+        return 2
+
+    script = build_script(rhyme, setting, palette, companion, seed, fmt=args.format)
 
     # Operating rule #3: gate it before it leaves the generator.
     result = scan_text(script["rhyme_title"], context="script.title")
@@ -211,6 +341,7 @@ def main():
     print(f"  setting  : {setting}")
     print(f"  palette  : {palette}")
     print(f"  companion: {companion}")
+    print(f"  format   : {script['format']} ({script['aspect']})")
     print(f"  runtime  : {script['runtime_s']}s across {len(script['scenes'])} scenes")
     print(f"  gate     : {result.verdict}")
     print("\nNext: python3 scripts/title_thumbnail_copy.py --script "

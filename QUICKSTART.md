@@ -296,17 +296,39 @@ duplicate detection silently stops working — and a silent failure is the dange
 
 ---
 
-## Planning more than one
+## Running the daily cadence
+
+The channel publishes **2 long videos + 2 Shorts every day**. Stack the calendar first, then work it.
 
 ```bash
-python3 scripts/batch_ideas.py --count 3 --weeks 1
+python3 scripts/bulk_scheduler.py --capacity          # can the library sustain the cadence?
+python3 scripts/bulk_scheduler.py --days 90           # stack 90 days = 360 dated slots
 ```
 
-Refuses to exceed 3/week, refuses two ideas sharing a rhyme, and duplicate-checks every idea against what
-is already published — **at planning time, where it is cheap.**
+You get `build/calendar-<start>-90d.csv` — every slot dated, timed, assigned a title and a rotated
+treatment, with the 21-day title cooldown enforced across the whole range. Work it row by row:
 
-A batch is a **plan, not an approval.** Every idea still runs the full pipeline and its own human review
-gate.
+```bash
+python3 scripts/pipeline.py --ref VID-20260904-1 --rhyme pop_weasel --format long
+# ... generate frames, review 100%, sign off ...
+python3 scripts/pipeline.py --ref VID-20260904-1 --package
+python3 scripts/thumbnail_generator.py --script build/VID-20260904-1/script.json
+```
+
+Then upload and set **Scheduled** with the `publish_at_utc` from the calendar row.
+
+### Read the two numbers the scheduler prints
+
+**Content headroom.** A 21-day cooldown at 2/day/format needs 42 titles per format. You have 48 and 46 —
+six and four spare. One clearance failing and the calendar starts leaving gaps. Verifying new
+public-domain titles is ongoing work now, not setup.
+
+**Review load: 12.1 h/week.** NN-4 still requires 100% of frames reviewed by a person, and that did not
+change when the cadence did. Twelve hours a week, every week. If that is not staffed, the honest fixes
+are: add reviewers, lower the cadence, or shorten runtimes. **Not** reviewing a sample — there is no
+sampling clause, and at 4/day the pressure to invent one is exactly four times what it used to be.
+
+A calendar slot is a **plan, not an approval.**
 
 ---
 

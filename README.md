@@ -19,7 +19,7 @@ python3 scripts/compliance_gate.py --preflight
 |---|---|---|
 | **NN-1** | Every video labeled **Made for Kids**. No exceptions. | `compliance_gate` · upload checklist |
 | **NN-2** | No personalized ads, comments, notifications, or live chat. | `compliance_gate` · upload checklist |
-| **NN-3** | No mass-production patterns, near-duplicates, or template farms. | `duplicate_detection.py` · `batch_ideas.py` |
+| **NN-3** | No mass-production patterns or near-duplicates. Volume is fine; duplication is not. | `duplicate_detection.py` · 21-day title cooldown |
 | **NN-4** | All AI output human-reviewed for warped faces, extra limbs, garbled text, unsafe visuals. | `frame_review_checklist.md` · sign-off gate |
 | **NN-5** | Public-domain rhymes only, or properly licensed. No famous recorded versions. | `licensing_tracker.csv` · `pipeline.py` |
 | **NN-6** | No collecting personal data from children off-platform, anywhere. | `compliance_gate` copy scanner |
@@ -107,6 +107,31 @@ policy tracker, and the published index that duplicate detection reads.
 
 ---
 
+## Cadence: 2 long videos + 2 Shorts, every day
+
+Set by the channel owner on 2026-09-03. Generation runs on Higgsfield AI Premium.
+
+```bash
+python3 scripts/bulk_scheduler.py --capacity        # can the library sustain it?
+python3 scripts/bulk_scheduler.py --days 90         # stack a dated calendar
+```
+
+The volume cap was replaced — not removed — by a sharper anti-duplication mechanism: a **21-day
+cooldown** on any title recurring in the same format, plus treatment scoring that judges structure and
+look rather than the mere fact of revisiting a rhyme. High volume is permitted; near-duplication at any
+volume is not.
+
+**Two things the scheduler will tell you every time you run it, because they are the real limits:**
+
+| | Status |
+|---|---|
+| **Content supply** | 48 verified long titles, 46 for Shorts. Needs 42 per format. **6 and 4 titles of headroom** — thin. Keep verifying. |
+| **Human review** | **12.1 h/week, forever.** NN-4 (100% of frames) was not touched. This, not Higgsfield, is the bottleneck. |
+
+A calendar slot is a **plan, never an approval**. Every slot is `PENDING` and runs its own review gate.
+
+---
+
 ## Quick start — one test video, end to end
 
 Full detail in **[QUICKSTART.md](QUICKSTART.md)**. The short version:
@@ -119,7 +144,9 @@ python3 scripts/compliance_gate.py --preflight
 python3 scripts/rhyme_generator.py --list
 
 # 2. Script + copy + music clearance + video prompts + duplicate check
-python3 scripts/pipeline.py --ref VID-2026-001 --rhyme hickory_dickory
+python3 scripts/pipeline.py --ref VID-2026-001 --rhyme hickory_dickory --format long
+#    ... or a vertical Short:
+#    python3 scripts/pipeline.py --ref SHT-2026-001 --rhyme humpty --format short
 
 #    ... the pipeline STOPS at the human review gate ...
 #    Generate frames from build/VID-2026-001/video_prompts.json
@@ -130,7 +157,10 @@ python3 scripts/pipeline.py --ref VID-2026-001 --rhyme hickory_dickory
 # 3. Build the publish package (refuses without a signed sign-off)
 python3 scripts/pipeline.py --ref VID-2026-001 --package
 
-# 4. A human uploads, following publishing/youtube_upload_checklist.md
+# 4. Thumbnail (SVG + composition brief)
+python3 scripts/thumbnail_generator.py --script build/VID-2026-001/script.json
+
+# 5. A human uploads, following publishing/youtube_upload_checklist.md
 ```
 
 Try `--rhyme wheels_bus` to watch the system refuse a rhyme whose public-domain status is unverified. That
@@ -196,6 +226,8 @@ changing a line of its own process.
 │   ├── source_text/             VERBATIM law + provenance + SHA-256
 │   └── *.md                     restatements applied to this channel
 ├── scripts/                     generation, gated
+│   ├── bulk_scheduler.py        stacks a dated calendar, 4 slots/day
+│   └── thumbnail_generator.py   SVG thumbnails + composition briefs
 ├── video/                       prompts, scene templates, frame review
 ├── music/                       clearance tracker + evidence
 ├── review/                      THE HUMAN GATE

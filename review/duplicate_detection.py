@@ -22,6 +22,7 @@ Thresholds live in compliance/rules.json:  >= 0.55 BLOCK,  >= 0.40 FLAG.
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import json
 import pathlib
 import sys
@@ -57,15 +58,31 @@ def structure_signature(item):
     return {"kinds": kinds, "n": len(kinds), "runtime": item.get("runtime_s", 0)}
 
 
+def days_between(a, b):
+    """Whole days between two ISO dates; None if either is missing/unparseable."""
+    try:
+        return abs((dt.date.fromisoformat(str(a)) - dt.date.fromisoformat(str(b))).days)
+    except (ValueError, TypeError):
+        return None
+
+
 def compare(candidate, prior):
-    """Return per-dimension similarity between a candidate and one published item."""
+    """Per-dimension similarity between a candidate and one published item.
+
+    The scoring question is NOT "is this the same rhyme?" - at 4 uploads a day, revisiting a
+    rhyme is inevitable and legitimate; that is what the cooldown window governs. The question
+    is "is this the same VIDEO?" So when the source rhyme matches, the title dimension is pure
+    redundancy and is excluded from the score: what must differ is the treatment - structure
+    and look. Title only scores across DIFFERENT rhymes, where it catches serial near-titles
+    ("Star Song 1 / 2 / 3").
+    """
     scores = {}
+    same_rhyme = bool(candidate.get("rhyme_id")) and candidate.get("rhyme_id") == prior.get("rhyme_id")
+    same_format = candidate.get("format", "long") == prior.get("format", "long")
 
     scores["title"] = jaccard(shingles(candidate.get("rhyme_title", "")),
                               shingles(prior.get("rhyme_title", "")))
-
-    scores["rhyme"] = 1.0 if candidate.get("rhyme_id") and \
-        candidate.get("rhyme_id") == prior.get("rhyme_id") else 0.0
+    scores["rhyme"] = 1.0 if same_rhyme else 0.0
 
     cs, ps = structure_signature(candidate), structure_signature(prior)
     if cs["kinds"] and ps["kinds"]:
@@ -83,15 +100,52 @@ def compare(candidate, prior):
             look_parts.append(jaccard(shingles(candidate[key]), shingles(prior[key])))
     scores["look"] = round(sum(look_parts) / len(look_parts), 4) if look_parts else 0.0
 
+    # A Short and a long video are different products even from one rhyme.
+    if not same_format:
+        scores["structure"] = round(scores["structure"] * 0.4, 4)
+        scores["look"] = round(scores["look"] * 0.6, 4)
+
+    # Weighting, and why it is not a plain max().
+    #
+    # A channel legitimately has ONE house format. Every video sharing the scene template scores
+    # high on structure by design, so letting structure drive the verdict would flag essentially
+    # every upload - 1,460 alarms a year, which trains everyone to click through them. NN-3 targets
+    # near-duplicate VIDEOS, not a consistent format.
+    #
+    # So identity (what the video actually is - its look, and its title across different rhymes)
+    # carries the verdict at 70%, and structure contributes 30%. Structure alone cannot block;
+    # structure on top of a shared look absolutely can.
+    identity = ["look"] if same_rhyme else ["title", "look"]
+    identity_score = max(scores[k] for k in identity)
+    composite = identity_score * 0.7 + scores["structure"] * 0.3
+
     scores = {k: round(v, 4) for k, v in scores.items()}
-    return scores, max(scores.values())
+    scores["_scored_on"] = f"{'+'.join(identity)} (70%) + structure (30%)"
+    return scores, round(composite, 4)
 
 
-def check(candidate):
+def check(candidate, today=None):
     rules = load_rules()
     th = rules["thresholds"]
     idx = load_index()
     published = idx.get("published", [])
+    today = today or dt.date.today().isoformat()
+    cooldown = th.get("title_cooldown_days", 21)
+
+    # Hard cooldown: the same title in the same format may not recur inside the window,
+    # however different the treatment. This is what replaced the old weekly volume cap.
+    cooldown_hit = None
+    for prior in published:
+        if (prior.get("rhyme_id") == candidate.get("rhyme_id")
+                and prior.get("format", "long") == candidate.get("format", "long")):
+            gap = days_between(today, prior.get("published_on"))
+            if gap is not None and gap < cooldown:
+                if cooldown_hit is None or gap < cooldown_hit["days_ago"]:
+                    cooldown_hit = {
+                        "ref": prior.get("ref"), "days_ago": gap,
+                        "cooldown_days": cooldown, "format": prior.get("format", "long"),
+                        "published_on": prior.get("published_on"),
+                    }
 
     comparisons = []
     for prior in published:
@@ -106,7 +160,7 @@ def check(candidate):
     comparisons.sort(key=lambda c: c["max_similarity"], reverse=True)
 
     max_sim = comparisons[0]["max_similarity"] if comparisons else 0.0
-    if max_sim >= th["duplicate_similarity_block"]:
+    if cooldown_hit or max_sim >= th["duplicate_similarity_block"]:
         verdict = "BLOCK"
     elif max_sim >= th["duplicate_similarity_flag"]:
         verdict = "FLAG"
@@ -119,6 +173,8 @@ def check(candidate):
         "compared_against": len(published),
         "block_threshold": th["duplicate_similarity_block"],
         "flag_threshold": th["duplicate_similarity_flag"],
+        "cooldown_days": cooldown,
+        "cooldown_violation": cooldown_hit,
         "closest": comparisons[:3],
     }
 
@@ -160,9 +216,17 @@ def main():
     if result["closest"]:
         print("\n  Closest matches:")
         for c in result["closest"]:
-            dims = "  ".join(f"{k}={v:.2f}" for k, v in c["scores"].items())
+            dims = "  ".join(f"{k}={v:.2f}" for k, v in c["scores"].items()
+                             if isinstance(v, (int, float)))
+            dims += f"   [scored on {c['scores'].get('_scored_on', 'n/a')}]"
             print(f"    {c['max_similarity']:.3f}  {c['against']:<14} {c['title']}")
             print(f"          {dims}")
+    if result.get("cooldown_violation"):
+        cv = result["cooldown_violation"]
+        print(f"\n  COOLDOWN VIOLATION: this exact title was published as a "
+              f"{cv['format']} {cv['days_ago']} day(s) ago ({cv['ref']}, {cv['published_on']}).")
+        print(f"  The cooldown is {cv['cooldown_days']} days. Pick a different title, or a "
+              f"different format.")
     if result["verdict"] == "BLOCK":
         print("\n  BLOCKED. This is too close to something already published.")
         print("  Change the rhyme, the setting, the characters AND the structure - not just the title.")

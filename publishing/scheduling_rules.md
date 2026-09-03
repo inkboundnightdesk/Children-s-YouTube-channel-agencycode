@@ -1,48 +1,128 @@
 # Scheduling Rules
 
-Volume is the mass-production signal. **NN-3 is enforced as much by the calendar as by the diff.**
+**Cadence: 2 long videos + 2 Shorts every day, indefinitely.** Set 2026-09-03 by the channel owner.
 
-## Hard limits — enforced in software
-
-From `../compliance/rules.json`:
-
-| Rule | Value | Enforced by |
+| Slot | Time (UTC) | Format |
 |---|---|---|
-| Maximum uploads per week | **3** | `compliance_gate` BLOCKs above this |
-| Minimum gap between uploads | **36 hours** | `compliance_gate` FLAGs below this |
-| Duplicate similarity | **< 0.55** | `duplicate_detection.py` BLOCKs at or above |
+| 1 | 09:00 | Long video |
+| 2 | 13:00 | Short |
+| 3 | 17:00 | Long video |
+| 4 | 21:00 | Short |
 
-`scripts/batch_ideas.py` refuses to plan a batch that exceeds the weekly cap at all — the limit applies at
-planning time, where it is cheap, not at the review gate, where it is expensive.
+Adjust `publish_times_utc` in [`../compliance/rules.json`](../compliance/rules.json) to your audience's
+timezone. These are placeholders — pick real times from your own analytics once you have them.
 
-## Why a cap on a channel that wants to grow
+---
 
-Because the thing that kills nursery-rhyme channels is not too little content. It is **too much
-undifferentiated content**, which reads to YouTube's systems exactly like a template farm, because that is
-what it is. Three genuinely distinct videos a week outperform ten reskins, and they do not put the channel
-at risk.
+## What changed, and what deliberately did not
 
-**If you find the cap frustrating, that is the cap doing its job.** Raising it is a policy change: edit
-`compliance/rules.json`, log it in `audit/CHANGELOG.md` with a reason, and own the decision.
+The old cap was 3 videos/week. It is now 28/week. **The anti-duplication rule did not move an inch.**
 
-## Cadence
+The cap was never really about volume — it was a crude proxy for "don't become a template farm." At
+4/day a crude proxy stops working, so it was replaced with something sharper:
 
-- **Two per week is the sustainable default.** Three is the ceiling, not the target.
-- Same days each week — parents build routines, and routine beats volume.
-- Publish in the morning for the target region: this audience watches early.
-- **Never publish two videos of the same rhyme family close together.** *Twinkle* and *Baa Baa Black Sheep*
-  share a melody; back-to-back they sound like a duplicate even though they are not.
+| Mechanism | Rule |
+|---|---|
+| **Title cooldown** | The same title in the same format may not recur within **21 days**, however different the treatment. Hard BLOCK. |
+| **Treatment scoring** | Same rhyme is judged on *structure* and *look*, not on the fact that it is the same rhyme. `>= 0.55` BLOCKs. |
+| **Format separation** | A Short and a long video of one rhyme are different products, scored as such — but not if they share the same setting, palette and companion. That is a reskin, and it still blocks. |
 
-## Seasonal content
+High volume is permitted. **Near-duplication at any volume is not.**
 
-- Publish seasonal videos **2–3 weeks ahead** of the season.
-- Do not rush a seasonal video through the review gate to hit a date. **The date is not a reason to skip a
-  gate.** If it is not ready, it ships next year.
+---
 
-## What to do when you cannot fill the slot
+## The arithmetic you have to respect
 
-Publish nothing.
+A daily cadence under a cooldown needs a minimum library:
 
-An empty slot costs a little momentum. A video pushed through a half-finished review gate can cost the
-channel. There is no schedule pressure in this system that outranks the review gate — and if anyone ever
-tells you otherwise, that is the moment to point at this line.
+```
+titles required = videos per day per format × cooldown days
+                = 2 × 21
+                = 42 distinct titles, per format
+```
+
+Current position: **48 verified long titles, 46 for Shorts.** Six and four titles of headroom.
+
+```bash
+python3 scripts/bulk_scheduler.py --capacity
+```
+
+**That headroom is thin.** One clearance turning out to be unverifiable takes a title out of rotation and
+the schedule starts leaving gaps. Treat verifying new public-domain titles as ongoing work, not a
+one-time setup task — the scheduler warns whenever headroom drops to 6 or below.
+
+To buy real headroom, widen `content_type` beyond `rhyme`: counting, alphabet, colours and shapes,
+seasonal, and original `story_cartoon` pieces need no public-domain rhyme at all and expand the space
+faster than verifying more rhymes does.
+
+---
+
+## Bulk stacking
+
+```bash
+python3 scripts/bulk_scheduler.py --days 90 --start 2026-09-04
+```
+
+Writes a calendar as both JSON and CSV:
+
+- every slot dated, timed, and assigned a title plus a rotated treatment
+- the cooldown enforced across the whole range
+- capacity and review load computed up front
+- **every slot marked `PENDING`**
+
+### The one rule that makes bulk scheduling safe
+
+> **A calendar slot is a plan. It is never an approval.**
+
+The scheduler cannot mark anything ready to publish, and nothing may be uploaded from the calendar
+file. Each slot runs the full pipeline and its own human review gate:
+
+```bash
+python3 scripts/pipeline.py --ref VID-20260904-1 --rhyme pop_weasel --format long
+# ... generate frames, review 100% of them, sign off ...
+python3 scripts/pipeline.py --ref VID-20260904-1 --package
+```
+
+Then, and only then, does it get scheduled in YouTube Studio.
+
+## Pre-setting dates in YouTube Studio
+
+Scheduling reviewed content in advance is fine and is the whole point of stacking. Upload the approved
+video, set visibility to **Scheduled**, and enter the `publish_at_utc` from the calendar row.
+
+**Confirm Made for Kids on the review screen before you schedule.** A scheduled video with the wrong
+audience setting goes live unattended and stays live until somebody notices — which is exactly the
+failure the review gate exists to prevent, arriving through the back door.
+
+---
+
+## The constraint that actually binds
+
+Not Higgsfield capacity. Not the rhyme library. **Human review time.**
+
+NN-4 requires 100% of AI frames reviewed by a person. At this cadence:
+
+```
+2 long  × ~38 min  = 76 min
+2 short × ~14 min  = 28 min
+                   = 104 min/day = 12.1 h/week
+```
+
+**Twelve hours a week of pure review, every week, forever.** That is a part-time job. The scheduler
+prints it on every run and compares it against `reviewer_hours_available_per_week` in `rules.json`.
+
+When review capacity runs short there are exactly three honest options:
+
+1. **Add reviewers** — update `reviewer_hours_available_per_week` and staff it.
+2. **Lower the cadence** — change `daily_long_videos` / `daily_shorts` in `rules.json`.
+3. **Shorten runtimes** — less footage per video is less footage to review.
+
+There is no fourth option. **Reviewing a sample is not an option** — NN-4 has no sampling clause, and
+loosening it is the one change that would make this system worthless, because at that point nothing is
+actually looking at what goes in front of children.
+
+## When you cannot fill a slot
+
+Publish nothing in it. A gap in the calendar costs a little momentum; a video pushed through a
+half-finished review gate can cost the channel. **No schedule pressure in this system outranks the
+review gate** — and at 4/day the pressure to skip it is exactly four times what it used to be.

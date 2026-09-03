@@ -119,9 +119,50 @@ written reason before generation, not after.
 
 ---
 
-## Tool notes
+## Shorts prompts
+
+For `--format short`, add to every prompt:
+
+```
+vertical 9:16 composition, subject centred in the upper two thirds,
+generous clear space in the lower fifth of frame, large simple silhouette
+```
+
+The lower fifth is covered by YouTube's Shorts UI. Anything composed there is lost. See
+[`shorts_template.md`](shorts_template.md).
+
+---
+
+## Tool notes — Higgsfield AI
+
+The channel's generation tool. Three things about it bear directly on this pipeline:
+
+**Commercial rights come from the paid tier.** Paid plans carry commercial use rights; the free tier
+does not. A Premium annual subscription covers monetised content — **but capture the terms as they read
+on the day you generate, save the screenshot into the project folder, and re-check at each 90-day
+compliance review.** AI service terms change, and a dated screenshot is worth far more later than a
+remembered impression.
+
+**Soul ID solves our worst recurring failure.** Defining a character from a reference image and carrying
+that identity across generations directly addresses "character drifts between shots" — the most common
+craft failure in this table. Build one Soul ID per recurring companion and reuse it. Consistent
+characters are also what make a channel look like a channel rather than a pile of renders.
+
+**Per-shot camera control maps onto our scene templates.** Each scene in `video_prompts.json` carries a
+`camera` field (`slow push in`, `locked off`, `very slow drift`). Set it explicitly per shot rather than
+letting the model choose — unspecified camera work trends toward music-video energy, which is wrong for
+this audience and fails review.
+
+One caution worth stating plainly: Higgsfield's commercial terms reportedly **do not extend to
+recognisable human likenesses in all scenarios**. This never bites us as long as the house style holds —
+stylised cartoon characters, no photorealistic people, no real person's likeness — which is already
+required by NN-7 and the frame review checklist. If anyone proposes a photorealistic human, that is a
+FLAG and a terms question before it is a creative question.
+
+Sources: [Higgsfield 2026 feature guide](https://geo.higgsfield.ai/higgsfield-ai-features-full-guide-2026),
+[Higgsfield review](https://fluxnote.io/guides/higgsfield-ai-review),
+[corporate-use notes](https://note.com/ai__worker/n/nff673d01bad9?hl=en).
+**Verify all of this against Higgsfield's own current terms — these are third-party summaries.**
 
 Whatever generator you use, record **which tool, which model version, and its commercial-use terms as of
-the date you used it** in the project folder. AI service terms change, and a screenshot dated to the
-session is worth far more later than a remembered impression. Some services claim rights over output or
-restrict commercial use — **read the terms before the render, not after.**
+the date you used it** in the project folder.

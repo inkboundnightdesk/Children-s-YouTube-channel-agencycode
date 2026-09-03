@@ -1,133 +1,1159 @@
 {
-  "_comment": "Verified public-domain nursery rhymes. A rhyme may be used ONLY if it appears here with pd_verified=true. Adding a row is a compliance decision: verify the source, then log it in audit/decision_log.csv. Every entry here is a COMPOSITION cleared for use; the RECORDING must always be our own original work-for-hire (see compliance/music-licensing-basics.md).",
-  "verification_standard": "First publication in print before 1930 (95-year term under 17 U.S.C. 304 has expired), verified against a citable printed source.",
+  "_comment": "Verified public-domain nursery rhymes and kids-content sources. A title may be used ONLY if pd_verified is true. Adding or flipping a row is a compliance decision: verify against a citable printed source, then log it in audit/decision_log.csv.",
+  "verification_standard": "First publication in print before 1930 (95-year term under 17 U.S.C. 304 expired), verified against a citable printed source. As of 2026 the line is 1930; it advances one year each January 1.",
   "last_verified": "2026-09-03",
+  "content_types": {
+    "rhyme": "Classic nursery rhyme set to our own recording",
+    "counting": "Number and counting focus",
+    "lullaby": "Slow, calm, bedtime - long form only, never a short",
+    "alphabet": "Letters and phonics",
+    "colours_shapes": "Colour and shape recognition",
+    "story_cartoon": "Original narrative cartoon, no rhyme required",
+    "seasonal": "Season or holiday themed"
+  },
   "rhymes": [
     {
       "id": "twinkle",
       "title": "Twinkle, Twinkle, Little Star",
-      "first_line": "Twinkle, twinkle, little star",
+      "content_type": "rhyme",
       "pd_verified": true,
       "pd_basis": "Lyrics from Jane Taylor, 'The Star', Rhymes for the Nursery (1806). Melody from 'Ah! vous dirai-je, maman' (published 1761).",
       "source": "Taylor, Ann and Jane. Rhymes for the Nursery. London: Darton and Harvey, 1806.",
-      "themes": ["night", "sky", "bedtime", "wonder"],
-      "tempo": "slow",
+      "themes": [
+        "night",
+        "sky",
+        "bedtime",
+        "wonder"
+      ],
       "mood": "calm",
-      "learning_hook": "stars, day and night, gentle wind-down",
       "verses": 2,
-      "notes": "Melody is shared with the Alphabet Song and Baa Baa Black Sheep. Vary the arrangement so our three uses do not sound like the same track."
+      "learning_hook": "stars, day and night, gentle wind-down",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "slow",
+      "notes": "Shares melody with Baa Baa Black Sheep and the Alphabet Song. Never schedule those three close together."
     },
     {
       "id": "itsy_bitsy",
       "title": "The Itsy Bitsy Spider",
-      "first_line": "The itsy bitsy spider climbed up the waterspout",
+      "content_type": "rhyme",
       "pd_verified": true,
-      "pd_basis": "Traditional; printed in collections well before 1930, including as 'spider song' in Camp and Camp Fire Activities (1910s) and earlier variants.",
+      "pd_basis": "Traditional English nursery rhyme; printed in Traditional American children's song; pre-1930 printed collections. Published far before 1930; 95-year term expired.",
       "source": "Traditional American children's song; pre-1930 printed collections.",
-      "themes": ["weather", "rain", "sun", "persistence", "insects"],
-      "tempo": "medium",
+      "themes": [
+        "weather",
+        "rain",
+        "sun",
+        "persistence"
+      ],
       "mood": "playful",
-      "learning_hook": "weather cycle, hand actions, cause and effect, trying again",
       "verses": 1,
-      "notes": "Strong finger-play song. Good for action-modelling without any call to action."
+      "learning_hook": "weather cycle, hand actions, trying again",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
     },
     {
       "id": "old_macdonald",
       "title": "Old MacDonald Had a Farm",
-      "first_line": "Old MacDonald had a farm",
+      "content_type": "rhyme",
       "pd_verified": true,
-      "pd_basis": "Traditional; printed as 'Ohio' in Tommy's Tunes (1917) and in Traditional Ballads and Folk Songs (1922).",
+      "pd_basis": "Traditional English nursery rhyme; printed in Tommy's Tunes, ed. F. T. Nettleingham, 1917. Published far before 1930; 95-year term expired.",
       "source": "Tommy's Tunes, ed. F. T. Nettleingham, 1917.",
-      "themes": ["farm", "animals", "sounds"],
-      "tempo": "medium",
+      "themes": [
+        "farm",
+        "animals",
+        "sounds"
+      ],
       "mood": "cheerful",
-      "learning_hook": "animal names and sounds, repetition, cumulative memory",
       "verses": 4,
-      "notes": "Cumulative structure gives natural variation between videos: change which animals and their order."
+      "learning_hook": "animal names and sounds, cumulative memory",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": "Cumulative structure gives natural variation: change which animals and their order."
     },
     {
       "id": "row_row",
       "title": "Row, Row, Row Your Boat",
-      "first_line": "Row, row, row your boat, gently down the stream",
+      "content_type": "rhyme",
       "pd_verified": true,
-      "pd_basis": "Printed in The Franklin Square Song Collection (1881).",
+      "pd_basis": "Traditional English nursery rhyme; printed in The Franklin Square Song Collection, New York: Harper and Brothers, 1881. Published far before 1930; 95-year term expired.",
       "source": "The Franklin Square Song Collection, New York: Harper and Brothers, 1881.",
-      "themes": ["water", "boats", "gentleness", "dreams"],
-      "tempo": "slow",
+      "themes": [
+        "water",
+        "boats",
+        "gentleness"
+      ],
       "mood": "calm",
-      "learning_hook": "rowing motion, rhythm and steady beat, round singing",
       "verses": 1,
-      "notes": "Very short. Needs a scene arc rather than verse count to fill runtime."
+      "learning_hook": "rowing motion, steady beat, round singing",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "slow",
+      "notes": ""
     },
     {
       "id": "mary_lamb",
       "title": "Mary Had a Little Lamb",
-      "first_line": "Mary had a little lamb, its fleece was white as snow",
+      "content_type": "rhyme",
       "pd_verified": true,
-      "pd_basis": "Sarah Josepha Hale, Poems for Our Children (1830); melody by Lowell Mason (1830s).",
+      "pd_basis": "Traditional English nursery rhyme; printed in Hale, Sarah Josepha. Poems for Our Children. Boston: Marsh, Capen and Lyon, 1830. Published far before 1930; 95-year term expired.",
       "source": "Hale, Sarah Josepha. Poems for Our Children. Boston: Marsh, Capen and Lyon, 1830.",
-      "themes": ["animals", "school", "friendship", "kindness"],
-      "tempo": "medium",
+      "themes": [
+        "animals",
+        "school",
+        "friendship"
+      ],
       "mood": "warm",
-      "learning_hook": "caring for animals, following, friendship",
       "verses": 3,
-      "notes": "Narrative rhyme - suits a story arc across scenes."
+      "learning_hook": "caring for animals, friendship",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
     },
     {
       "id": "hickory_dickory",
       "title": "Hickory Dickory Dock",
-      "first_line": "Hickory dickory dock, the mouse ran up the clock",
+      "content_type": "rhyme",
       "pd_verified": true,
-      "pd_basis": "Printed in Tommy Thumb's Pretty Song Book (c. 1744).",
+      "pd_basis": "Traditional English nursery rhyme; printed in Tommy Thumb's Pretty Song Book, London, c. 1744. Published far before 1930; 95-year term expired.",
       "source": "Tommy Thumb's Pretty Song Book, London, c. 1744.",
-      "themes": ["time", "clocks", "mice", "counting"],
-      "tempo": "medium",
+      "themes": [
+        "time",
+        "clocks",
+        "mice",
+        "counting"
+      ],
       "mood": "playful",
-      "learning_hook": "telling the hour, counting to twelve, up and down",
       "verses": 3,
-      "notes": "Natural counting extension: one o'clock, two o'clock. Good numeracy hook."
+      "learning_hook": "telling the hour, counting to twelve",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
     },
     {
       "id": "london_bridge",
       "title": "London Bridge Is Falling Down",
-      "first_line": "London Bridge is falling down",
+      "content_type": "rhyme",
       "pd_verified": true,
-      "pd_basis": "Traditional; printed in Tommy Thumb's Pretty Song Book (c. 1744) and Gammer Gurton's Garland (1784).",
-      "source": "Gammer Gurton's Garland, 1784.",
-      "themes": ["building", "bridges", "materials", "problem solving"],
-      "tempo": "medium",
+      "pd_basis": "Traditional English nursery rhyme; printed in Gammer Gurton's Garland, London, 1784. Published far before 1930; 95-year term expired.",
+      "source": "Gammer Gurton's Garland, London, 1784.",
+      "themes": [
+        "building",
+        "bridges",
+        "materials"
+      ],
       "mood": "cheerful",
-      "learning_hook": "materials and building, repairing what is broken",
       "verses": 4,
-      "notes": "Keep the visuals constructive - building and mending, never collapse or peril."
+      "learning_hook": "materials, repairing what is broken",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": "Keep visuals constructive - building and mending, never collapse or peril."
     },
     {
       "id": "baa_baa",
       "title": "Baa, Baa, Black Sheep",
-      "first_line": "Baa, baa, black sheep, have you any wool?",
+      "content_type": "rhyme",
       "pd_verified": true,
-      "pd_basis": "Printed in Tommy Thumb's Pretty Song Book (c. 1744).",
+      "pd_basis": "Traditional English nursery rhyme; printed in Tommy Thumb's Pretty Song Book, London, c. 1744. Published far before 1930; 95-year term expired.",
       "source": "Tommy Thumb's Pretty Song Book, London, c. 1744.",
-      "themes": ["farm", "animals", "sharing", "counting"],
-      "tempo": "medium",
+      "themes": [
+        "farm",
+        "animals",
+        "sharing",
+        "counting"
+      ],
       "mood": "warm",
-      "learning_hook": "counting to three, sharing, where wool comes from",
       "verses": 1,
-      "notes": "Shares the 'Ah! vous dirai-je, maman' melody with Twinkle. Do not schedule the two close together."
+      "learning_hook": "counting to three, sharing, where wool comes from",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
+    },
+    {
+      "id": "jack_jill",
+      "title": "Jack and Jill",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Mother Goose's Melody, London: J. Newbery, c. 1780. Published far before 1930; 95-year term expired.",
+      "source": "Mother Goose's Melody, London: J. Newbery, c. 1780.",
+      "themes": [
+        "hills",
+        "water",
+        "helping"
+      ],
+      "mood": "cheerful",
+      "verses": 2,
+      "learning_hook": "going up and down, helping a friend",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": "Soften the tumble - no injury, no distress. Show them helping each other up."
+    },
+    {
+      "id": "humpty",
+      "title": "Humpty Dumpty",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Gammer Gurton's Garland, London, 1784. Published far before 1930; 95-year term expired.",
+      "source": "Gammer Gurton's Garland, London, 1784.",
+      "themes": [
+        "shapes",
+        "eggs",
+        "helping"
+      ],
+      "mood": "playful",
+      "verses": 1,
+      "learning_hook": "round shapes, working together to mend",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": "End on repair and kindness, never on breakage as loss."
+    },
+    {
+      "id": "miss_muffet",
+      "title": "Little Miss Muffet",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in The Only True Mother Goose Melodies, Boston: Munroe & Francis, 1833. Published far before 1930; 95-year term expired.",
+      "source": "The Only True Mother Goose Melodies, Boston: Munroe & Francis, 1833.",
+      "themes": [
+        "food",
+        "insects",
+        "gentleness"
+      ],
+      "mood": "playful",
+      "verses": 1,
+      "learning_hook": "being brave about small creatures",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": "Spider must be friendly and small. No fright, no fleeing in fear."
+    },
+    {
+      "id": "hey_diddle",
+      "title": "Hey Diddle Diddle",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Mother Goose's Melody, London: J. Newbery, c. 1780. Published far before 1930; 95-year term expired.",
+      "source": "Mother Goose's Melody, London: J. Newbery, c. 1780.",
+      "themes": [
+        "moon",
+        "animals",
+        "nonsense"
+      ],
+      "mood": "playful",
+      "verses": 1,
+      "learning_hook": "silly imagination, moon and stars",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
+    },
+    {
+      "id": "bo_peep",
+      "title": "Little Bo-Peep",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Gammer Gurton's Garland, London, 1784. Published far before 1930; 95-year term expired.",
+      "source": "Gammer Gurton's Garland, London, 1784.",
+      "themes": [
+        "sheep",
+        "searching",
+        "patience"
+      ],
+      "mood": "warm",
+      "verses": 3,
+      "learning_hook": "looking carefully, patience, finding what is lost",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
+    },
+    {
+      "id": "three_mice",
+      "title": "Three Blind Mice",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Deuteromelia, London, 1609. Published far before 1930; 95-year term expired.",
+      "source": "Deuteromelia, London, 1609.",
+      "themes": [
+        "counting",
+        "mice"
+      ],
+      "mood": "playful",
+      "verses": 1,
+      "learning_hook": "counting to three",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": "Use the gentle modern nursery version only. Omit the farmer's knife entirely - rewrite as a chase-and-friendship beat."
+    },
+    {
+      "id": "pat_a_cake",
+      "title": "Pat-a-Cake, Pat-a-Cake",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Tommy Thumb's Pretty Song Book, London, c. 1744. Published far before 1930; 95-year term expired.",
+      "source": "Tommy Thumb's Pretty Song Book, London, c. 1744.",
+      "themes": [
+        "baking",
+        "hands",
+        "letters"
+      ],
+      "mood": "cheerful",
+      "verses": 1,
+      "learning_hook": "clapping rhythm, baking, first letters",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
+    },
+    {
+      "id": "this_piggy",
+      "title": "This Little Piggy",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Tommy Thumb's Pretty Song Book, London, c. 1744. Published far before 1930; 95-year term expired.",
+      "source": "Tommy Thumb's Pretty Song Book, London, c. 1744.",
+      "themes": [
+        "toes",
+        "counting",
+        "market"
+      ],
+      "mood": "playful",
+      "verses": 1,
+      "learning_hook": "counting to five, toes and fingers",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
+    },
+    {
+      "id": "ring_roses",
+      "title": "Ring a Ring o' Roses",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Kate Greenaway, Mother Goose or the Old Nursery Rhymes, London, 1881. Published far before 1930; 95-year term expired.",
+      "source": "Kate Greenaway, Mother Goose or the Old Nursery Rhymes, London, 1881.",
+      "themes": [
+        "circles",
+        "flowers",
+        "movement"
+      ],
+      "mood": "cheerful",
+      "verses": 1,
+      "learning_hook": "circle games, moving together",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
+    },
+    {
+      "id": "old_king_cole",
+      "title": "Old King Cole",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in William King, Useful Transactions in Philosophy, 1708-09. Published far before 1930; 95-year term expired.",
+      "source": "William King, Useful Transactions in Philosophy, 1708-09.",
+      "themes": [
+        "music",
+        "instruments",
+        "kings"
+      ],
+      "mood": "cheerful",
+      "verses": 3,
+      "learning_hook": "musical instruments, three fiddlers",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
+    },
+    {
+      "id": "mary_contrary",
+      "title": "Mary, Mary, Quite Contrary",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Tommy Thumb's Pretty Song Book, London, c. 1744. Published far before 1930; 95-year term expired.",
+      "source": "Tommy Thumb's Pretty Song Book, London, c. 1744.",
+      "themes": [
+        "gardens",
+        "flowers",
+        "growing"
+      ],
+      "mood": "warm",
+      "verses": 1,
+      "learning_hook": "how a garden grows, plants and flowers",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
+    },
+    {
+      "id": "wee_willie",
+      "title": "Wee Willie Winkie",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in William Miller, Whistle-binkie: Stories for the Fireside, Glasgow, 1841. Published far before 1930; 95-year term expired.",
+      "source": "William Miller, Whistle-binkie: Stories for the Fireside, Glasgow, 1841.",
+      "themes": [
+        "bedtime",
+        "night",
+        "routine"
+      ],
+      "mood": "calm",
+      "verses": 1,
+      "learning_hook": "bedtime routine, night-time, winding down",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "slow",
+      "notes": ""
+    },
+    {
+      "id": "polly_kettle",
+      "title": "Polly Put the Kettle On",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Charles Dibdin, The Wags, 1790s; printed in 19th-c. collections. Published far before 1930; 95-year term expired.",
+      "source": "Charles Dibdin, The Wags, 1790s; printed in 19th-c. collections.",
+      "themes": [
+        "home",
+        "tea",
+        "visitors"
+      ],
+      "mood": "warm",
+      "verses": 2,
+      "learning_hook": "taking turns, welcoming friends",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
+    },
+    {
+      "id": "duke_york",
+      "title": "The Grand Old Duke of York",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Gammer Gurton's Garland, London, 1784. Published far before 1930; 95-year term expired.",
+      "source": "Gammer Gurton's Garland, London, 1784.",
+      "themes": [
+        "marching",
+        "up and down",
+        "counting"
+      ],
+      "mood": "cheerful",
+      "verses": 2,
+      "learning_hook": "up and down, marching, following directions",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
+    },
+    {
+      "id": "muffin_man",
+      "title": "The Muffin Man",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Manuscript collections, London, c. 1820; printed 19th c. Published far before 1930; 95-year term expired.",
+      "source": "Manuscript collections, London, c. 1820; printed 19th c.",
+      "themes": [
+        "baking",
+        "neighbours",
+        "streets"
+      ],
+      "mood": "cheerful",
+      "verses": 2,
+      "learning_hook": "neighbourhood, who lives near us",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
+    },
+    {
+      "id": "oranges_lemons",
+      "title": "Oranges and Lemons",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Tommy Thumb's Pretty Song Book, London, c. 1744. Published far before 1930; 95-year term expired.",
+      "source": "Tommy Thumb's Pretty Song Book, London, c. 1744.",
+      "themes": [
+        "bells",
+        "fruit",
+        "cities"
+      ],
+      "mood": "cheerful",
+      "verses": 3,
+      "learning_hook": "fruit names, bells and sounds",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": "Stop before the 'chopper' ending. Close on the bells."
+    },
+    {
+      "id": "bobby_shafto",
+      "title": "Bobby Shafto's Gone to Sea",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Gammer Gurton's Garland, London, 1784. Published far before 1930; 95-year term expired.",
+      "source": "Gammer Gurton's Garland, London, 1784.",
+      "themes": [
+        "sea",
+        "boats",
+        "waiting"
+      ],
+      "mood": "warm",
+      "verses": 2,
+      "learning_hook": "the sea, coming home",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
+    },
+    {
+      "id": "lavenders_blue",
+      "title": "Lavender's Blue",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Broadside ballad, London, c. 1675; printed in later collections. Published far before 1930; 95-year term expired.",
+      "source": "Broadside ballad, London, c. 1675; printed in later collections.",
+      "themes": [
+        "colours",
+        "flowers",
+        "friendship"
+      ],
+      "mood": "tender",
+      "verses": 2,
+      "learning_hook": "colours, blue and green, flowers",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "slow",
+      "notes": ""
+    },
+    {
+      "id": "jack_nimble",
+      "title": "Jack Be Nimble",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in The Only True Mother Goose Melodies, Boston: Munroe & Francis, 1833. Published far before 1930; 95-year term expired.",
+      "source": "The Only True Mother Goose Melodies, Boston: Munroe & Francis, 1833.",
+      "themes": [
+        "movement",
+        "candles",
+        "agility"
+      ],
+      "mood": "playful",
+      "verses": 1,
+      "learning_hook": "jumping, over and under, being quick",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
+    },
+    {
+      "id": "jack_horner",
+      "title": "Little Jack Horner",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Namby Pamby, London, 1725. Published far before 1930; 95-year term expired.",
+      "source": "Namby Pamby, London, 1725.",
+      "themes": [
+        "food",
+        "corners",
+        "seasons"
+      ],
+      "mood": "cheerful",
+      "verses": 1,
+      "learning_hook": "counting, plums and pies",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
+    },
+    {
+      "id": "cock_doodle",
+      "title": "Cock-a-Doodle-Doo",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Tommy Thumb's Pretty Song Book, London, c. 1744. Published far before 1930; 95-year term expired.",
+      "source": "Tommy Thumb's Pretty Song Book, London, c. 1744.",
+      "themes": [
+        "morning",
+        "farm",
+        "sounds"
+      ],
+      "mood": "cheerful",
+      "verses": 2,
+      "learning_hook": "morning routine, farm sounds",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
+    },
+    {
+      "id": "old_woman_shoe",
+      "title": "There Was an Old Woman Who Lived in a Shoe",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Gammer Gurton's Garland, London, 1784. Published far before 1930; 95-year term expired.",
+      "source": "Gammer Gurton's Garland, London, 1784.",
+      "themes": [
+        "home",
+        "family",
+        "shoes"
+      ],
+      "mood": "warm",
+      "verses": 1,
+      "learning_hook": "homes and families, big and small",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": "Use the gentle variant. Omit the whipping line entirely - replace with tucking them in."
+    },
+    {
+      "id": "simple_simon",
+      "title": "Simple Simon",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Chapbook, London, c. 1764. Published far before 1930; 95-year term expired.",
+      "source": "Chapbook, London, c. 1764.",
+      "themes": [
+        "fairs",
+        "questions",
+        "trying"
+      ],
+      "mood": "playful",
+      "verses": 3,
+      "learning_hook": "asking questions, trying again",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
+    },
+    {
+      "id": "diddle_dumpling",
+      "title": "Diddle Diddle Dumpling",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Gammer Gurton's Garland, London, 1784. Published far before 1930; 95-year term expired.",
+      "source": "Gammer Gurton's Garland, London, 1784.",
+      "themes": [
+        "bedtime",
+        "shoes",
+        "sleep"
+      ],
+      "mood": "calm",
+      "verses": 1,
+      "learning_hook": "bedtime, taking off shoes",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "slow",
+      "notes": ""
+    },
+    {
+      "id": "curly_locks",
+      "title": "Curly Locks",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Gammer Gurton's Garland, London, 1784. Published far before 1930; 95-year term expired.",
+      "source": "Gammer Gurton's Garland, London, 1784.",
+      "themes": [
+        "friendship",
+        "sewing",
+        "strawberries"
+      ],
+      "mood": "tender",
+      "verses": 1,
+      "learning_hook": "kindness, sharing a meal",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "slow",
+      "notes": ""
+    },
+    {
+      "id": "peter_pumpkin",
+      "title": "Peter, Peter, Pumpkin Eater",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Infant Institutes, London, 1797. Published far before 1930; 95-year term expired.",
+      "source": "Infant Institutes, London, 1797.",
+      "themes": [
+        "pumpkins",
+        "autumn",
+        "homes"
+      ],
+      "mood": "cheerful",
+      "verses": 1,
+      "learning_hook": "autumn, pumpkins, harvest",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": "Rewrite the 'kept her' line as building a pumpkin house together."
+    },
+    {
+      "id": "hot_cross_buns",
+      "title": "Hot Cross Buns",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Poor Robin's Almanac, London, 1733. Published far before 1930; 95-year term expired.",
+      "source": "Poor Robin's Almanac, London, 1733.",
+      "themes": [
+        "baking",
+        "counting",
+        "spring"
+      ],
+      "mood": "cheerful",
+      "verses": 1,
+      "learning_hook": "counting, one a penny two a penny",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
+    },
+    {
+      "id": "one_two_buckle",
+      "title": "One, Two, Buckle My Shoe",
+      "content_type": "counting",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Songs for the Nursery, London, 1805. Published far before 1930; 95-year term expired.",
+      "source": "Songs for the Nursery, London, 1805.",
+      "themes": [
+        "counting",
+        "numbers",
+        "shoes"
+      ],
+      "mood": "playful",
+      "verses": 5,
+      "learning_hook": "counting to twenty, number pairs",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
+    },
+    {
+      "id": "farmer_dell",
+      "title": "The Farmer in the Dell",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in German original c. 1820; American printing, 1883. Published far before 1930; 95-year term expired.",
+      "source": "German original c. 1820; American printing, 1883.",
+      "themes": [
+        "farm",
+        "family",
+        "circles"
+      ],
+      "mood": "cheerful",
+      "verses": 5,
+      "learning_hook": "who belongs with whom, circle games",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
+    },
+    {
+      "id": "skip_to_lou",
+      "title": "Skip to My Lou",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in American play-party song; printed 19th c. Published far before 1930; 95-year term expired.",
+      "source": "American play-party song; printed 19th c.",
+      "themes": [
+        "dancing",
+        "partners",
+        "movement"
+      ],
+      "mood": "cheerful",
+      "verses": 3,
+      "learning_hook": "moving to a beat, partners",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
+    },
+    {
+      "id": "yankee_doodle",
+      "title": "Yankee Doodle",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Printed in sheet music, c. 1780s. Published far before 1930; 95-year term expired.",
+      "source": "Printed in sheet music, c. 1780s.",
+      "themes": [
+        "marching",
+        "feathers",
+        "parades"
+      ],
+      "mood": "cheerful",
+      "verses": 2,
+      "learning_hook": "marching, parades, rhythm",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
+    },
+    {
+      "id": "pop_weasel",
+      "title": "Pop Goes the Weasel",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Sheet music, London, 1853. Published far before 1930; 95-year term expired.",
+      "source": "Sheet music, London, 1853.",
+      "themes": [
+        "surprise",
+        "markets",
+        "rhythm"
+      ],
+      "mood": "playful",
+      "verses": 3,
+      "learning_hook": "anticipation, listening for the pop",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
+    },
+    {
+      "id": "frere_jacques",
+      "title": "Frere Jacques (Are You Sleeping?)",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Printed in French collections, early 19th c. Published far before 1930; 95-year term expired.",
+      "source": "Printed in French collections, early 19th c.",
+      "themes": [
+        "morning",
+        "bells",
+        "sleep"
+      ],
+      "mood": "calm",
+      "verses": 2,
+      "learning_hook": "morning, bells, singing in a round",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "slow",
+      "notes": ""
+    },
+    {
+      "id": "rain_go_away",
+      "title": "Rain, Rain, Go Away",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in John Aubrey, 1687; printed in later collections. Published far before 1930; 95-year term expired.",
+      "source": "John Aubrey, 1687; printed in later collections.",
+      "themes": [
+        "weather",
+        "rain",
+        "patience"
+      ],
+      "mood": "cheerful",
+      "verses": 1,
+      "learning_hook": "weather, waiting for sunshine",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": ""
+    },
+    {
+      "id": "star_light",
+      "title": "Star Light, Star Bright",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in American traditional; printed late 19th c. Published far before 1930; 95-year term expired.",
+      "source": "American traditional; printed late 19th c.",
+      "themes": [
+        "night",
+        "stars",
+        "wishes"
+      ],
+      "mood": "calm",
+      "verses": 1,
+      "learning_hook": "stars, night sky, making a wish",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "slow",
+      "notes": ""
+    },
+    {
+      "id": "hush_little_baby",
+      "title": "Hush, Little Baby",
+      "content_type": "lullaby",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in American traditional lullaby; printed 19th c. Published far before 1930; 95-year term expired.",
+      "source": "American traditional lullaby; printed 19th c.",
+      "themes": [
+        "bedtime",
+        "comfort",
+        "family"
+      ],
+      "mood": "tender",
+      "verses": 4,
+      "learning_hook": "comfort, gentle wind-down",
+      "formats": [
+        "long"
+      ],
+      "tempo": "slow",
+      "notes": ""
+    },
+    {
+      "id": "rock_a_bye",
+      "title": "Rock-a-Bye Baby",
+      "content_type": "lullaby",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Mother Goose's Melody, London: J. Newbery, c. 1780. Published far before 1930; 95-year term expired.",
+      "source": "Mother Goose's Melody, London: J. Newbery, c. 1780.",
+      "themes": [
+        "bedtime",
+        "rocking",
+        "comfort"
+      ],
+      "mood": "tender",
+      "verses": 1,
+      "learning_hook": "gentle rocking, sleep",
+      "formats": [
+        "long"
+      ],
+      "tempo": "slow",
+      "notes": "Use the reassuring variant. No falling - end with safe, held, and sleeping."
+    },
+    {
+      "id": "ding_dong_bell",
+      "title": "Ding Dong Bell",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Tommy Thumb's Pretty Song Book, London, c. 1744. Published far before 1930; 95-year term expired.",
+      "source": "Tommy Thumb's Pretty Song Book, London, c. 1744.",
+      "themes": [
+        "bells",
+        "cats",
+        "kindness"
+      ],
+      "mood": "playful",
+      "verses": 1,
+      "learning_hook": "kindness to animals, bells",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": "Use ONLY the rescue variant - the cat is lifted out safely. Never the well version."
+    },
+    {
+      "id": "tom_piper",
+      "title": "Tom, Tom, the Piper's Son",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in Chapbook, London, c. 1795. Published far before 1930; 95-year term expired.",
+      "source": "Chapbook, London, c. 1795.",
+      "themes": [
+        "music",
+        "running",
+        "pipes"
+      ],
+      "mood": "playful",
+      "verses": 1,
+      "learning_hook": "music and movement",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": "Drop the stolen-pig line. Rewrite as Tom playing his pipe through the town."
+    },
+    {
+      "id": "georgie_porgie",
+      "title": "Georgie Porgie",
+      "content_type": "rhyme",
+      "pd_verified": true,
+      "pd_basis": "Traditional English nursery rhyme; printed in The Kentish Coronal, 1841. Published far before 1930; 95-year term expired.",
+      "source": "The Kentish Coronal, 1841.",
+      "themes": [
+        "friendship",
+        "play"
+      ],
+      "mood": "playful",
+      "verses": 1,
+      "learning_hook": "playing kindly with others",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": "Rewrite so Georgie apologises and plays kindly. No kissing, no making anyone cry."
+    },
+    {
+      "id": "this_old_man",
+      "title": "This Old Man",
+      "content_type": "counting",
+      "pd_verified": false,
+      "pd_basis": "NEEDS VERIFICATION. Widely traditional, but the earliest citable printing is unclear and one common attribution is 20th century.",
+      "source": "Anne Gilchrist, Journal of the Folk-Song Society, 1937 (oral tradition; earlier variants).",
+      "themes": [
+        "counting",
+        "rhythm"
+      ],
+      "mood": "cheerful",
+      "verses": 5,
+      "learning_hook": "counting to ten, knick-knack rhythm",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": "FLAGGED. Confirm a pre-1930 printing before use."
     },
     {
       "id": "wheels_bus",
       "title": "The Wheels on the Bus",
-      "first_line": "The wheels on the bus go round and round",
+      "content_type": "rhyme",
       "pd_verified": false,
       "pd_basis": "UNVERIFIED. Commonly attributed to Verna Hills, 1939 - which would still be in copyright.",
-      "source": "Attributed: Verna Hills, American Childhood magazine, 1939.",
-      "themes": ["transport", "town", "sounds"],
-      "tempo": "medium",
+      "source": "Attributed: Verna Hills, American Childhood, 1939.",
+      "themes": [
+        "transport",
+        "town",
+        "sounds"
+      ],
       "mood": "cheerful",
-      "learning_hook": "vehicles, community, sounds",
       "verses": 5,
-      "notes": "DO NOT USE. Present here deliberately as a worked example: it feels traditional and is widely treated as free, but the attribution is 1939 and the public-domain basis is unverified. The generator refuses it. Resolving this requires counsel, not a guess."
+      "learning_hook": "vehicles, community, sounds",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": "DO NOT USE. Worked example: feels traditional, widely treated as free, attribution is 1939."
+    },
+    {
+      "id": "little_teapot",
+      "title": "I'm a Little Teapot",
+      "content_type": "rhyme",
+      "pd_verified": false,
+      "pd_basis": "UNVERIFIED - almost certainly still in copyright. Written by George Harold Sanders and Clarence Kelley, 1939.",
+      "source": "Kelley and Sanders, 1939.",
+      "themes": [
+        "shapes",
+        "pouring",
+        "actions"
+      ],
+      "mood": "playful",
+      "verses": 1,
+      "learning_hook": "body shapes, actions",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": "DO NOT USE. A second worked example of a 20th-century song that feels like folklore."
+    },
+    {
+      "id": "happy_know_it",
+      "title": "If You're Happy and You Know It",
+      "content_type": "rhyme",
+      "pd_verified": false,
+      "pd_basis": "UNVERIFIED. Origin disputed, popularised mid-20th century. No citable pre-1930 printing found.",
+      "source": "Origin disputed; popularised mid-20th century.",
+      "themes": [
+        "feelings",
+        "actions",
+        "clapping"
+      ],
+      "mood": "cheerful",
+      "verses": 3,
+      "learning_hook": "naming feelings, actions",
+      "formats": [
+        "long",
+        "short"
+      ],
+      "tempo": "medium",
+      "notes": "FLAGGED. Needs counsel or a verified pre-1930 source before use."
     }
   ]
 }

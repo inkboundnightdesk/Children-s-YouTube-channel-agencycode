@@ -99,6 +99,9 @@ def build_video_prompts(script):
     style = (f"{script['visual_style']} style, soft rounded shapes, gentle lighting, "
              f"palette of {script['palette']}, flat storybook illustration, friendly and calm, "
              f"generous negative space, slow camera")
+    if script.get("format") == "short":
+        style += (", vertical 9:16 composition, subject centred in the upper two thirds, "
+                  "generous clear space in the lower fifth of frame")
     prompts = []
     for sc in script["scenes"]:
         prompts.append({
@@ -127,7 +130,7 @@ def build_video_prompts(script):
     }
 
 
-def cmd_run(ref, rhyme, seed):
+def cmd_run(ref, rhyme, seed, fmt="long"):
     d = workdir(ref)
     d.mkdir(parents=True, exist_ok=True)
 
@@ -135,6 +138,7 @@ def cmd_run(ref, rhyme, seed):
 
     # 1. script
     if run([sys.executable, "scripts/rhyme_generator.py", "--rhyme", rhyme, "--ref", ref,
+            "--format", fmt,
             *(["--seed", str(seed)] if seed is not None else [])]) != 0:
         print("\nStopped at the script stage.", file=sys.stderr)
         return 2
@@ -240,6 +244,8 @@ def cmd_package(ref):
         "ref": ref,
         "built_on": dt.date.today().isoformat(),
         "rhyme_id": script["rhyme_id"],
+        "format": script.get("format", "long"),
+        "aspect": script.get("aspect", "16:9"),
         "visual_style": script["visual_style"],
         "runtime_s": script["runtime_s"],
         "no_offplatform_collection": True,
@@ -308,6 +314,7 @@ def main():
     ap.add_argument("--ref", required=True)
     ap.add_argument("--rhyme")
     ap.add_argument("--seed", type=int, default=None)
+    ap.add_argument("--format", choices=["long", "short", "cartoon"], default="long")
     ap.add_argument("--status", action="store_true")
     ap.add_argument("--package", action="store_true")
     args = ap.parse_args()
@@ -326,7 +333,7 @@ def main():
         return cmd_package(args.ref)
     if not args.rhyme:
         ap.error("--rhyme is required to start a pipeline (or use --status / --package)")
-    return cmd_run(args.ref, args.rhyme, args.seed)
+    return cmd_run(args.ref, args.rhyme, args.seed, fmt=args.format)
 
 
 if __name__ == "__main__":
