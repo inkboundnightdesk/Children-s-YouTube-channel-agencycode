@@ -1,0 +1,578 @@
+      ================================================================================
+      COPYRIGHT ACT - SUBJECT MATTER, EXCLUSIVE RIGHTS, AND DURATION
+      ================================================================================
+      CITATION        : 17 U.S.C. §§ 102, 106, 302, 303, 304, 305
+      ISSUING BODY    : Office of the Law Revision Counsel, U.S. House of Representatives
+      AUTHORITATIVE   : https://uscode.house.gov/view.xhtml?path=/prelim@title17&edition=prelim
+      TEXT RETRIEVED  : Mirror snapshot generated 2016; §§ 302-305 unamended since Pub. L. 105-298 (1998)
+      OBTAINED VIA    : github.com/publicdocs/uscode (portions (c) the publicdocs authors; see repo NOTICE)
+      STATUS          : VERBATIM (US Government work, not subject to copyright)
+      VERIFY BEFORE USE:
+        These are the sections that DECIDE public-domain status, and they have not
+changed since 1998. §§ 114 and 115 are deliberately EXCLUDED from this file:
+the Music Modernization Act (Pub. L. 115-264, 2018) rewrote them and this
+mirror predates it. Re-fetch 17 U.S.C. before relying on §§ 114/115.
+      --------------------------------------------------------------------------------
+      This file is REFERENCE LAW. Do not edit the text below by hand. Replace it only
+      by running:  python3 compliance/fetch_compliance.py --refresh
+      ================================================================================
+
+§ 102. Subject matter of copyright: In general
+
+    (a)
+
+     Copyright protection subsists, in accordance with this title, in original works of authorship fixed in any tangible medium of expression, now known or later developed, from which they can be perceived, reproduced, or otherwise communicated, either directly or with the aid of a machine or device. Works of authorship include the following categories:
+
+        (1) literary works;
+
+        (2) musical works, including any accompanying words;
+
+        (3) dramatic works, including any accompanying music;
+
+        (4) pantomimes and choreographic works;
+
+        (5) pictorial, graphic, and sculptural works;
+
+        (6) motion pictures and other audiovisual works;
+
+        (7) sound recordings; and
+
+        (8) architectural works.
+
+    (b) In no case does copyright protection for an original work of authorship extend to any idea, procedure, process, system, method of operation, concept, principle, or discovery, regardless of the form in which it is described, explained, illustrated, or embodied in such work.
+
+(Pub. L. 94–553, title I, § 101, Oct. 19, 1976, 90 Stat. 2544; Pub. L. 101–650, title VII, § 703, Dec. 1, 1990, 104 Stat. 5133.)
+
+ Historical and Revision Notes
+
+ house report no. 94–1476
+
+    Original Works of Authorship. The two fundamental criteria of copyright protection—originality and fixation in tangible form are restated in the first sentence of this cornerstone provision. The phrase “original works or authorship,” which is purposely left undefined, is intended to incorporate without change the standard of originality established by the courts under the present copyright statute. This standard does not include requirements of novelty, ingenuity, or esthetic merit, and there is no intention to enlarge the standard of copyright protection to require them.
+
+    In using the phrase “original works of authorship,” rather than “all the writings of an author” now in section 4 of the statute \[section 4 of former title 17\], the committee’s purpose is to avoid exhausting the constitutional power of Congress to legislate in this field, and to eliminate the uncertainties arising from the latter phrase. Since the present statutory language is substantially the same as the empowering language of the Constitution \[Const. Art. I, § 8, cl. 8\], a recurring question has been whether the statutory and the constitutional provisions are coextensive. If so, the courts would be faced with the alternative of holding copy­rightable something that Congress clearly did not intend to protect, or of holding constitutionally incapable of copyright something that Congress might one day want to protect. To avoid these equally undesirable results, the courts have indicated that “all the writings of an author” under the present statute is narrower in scope than the “writings” of “authors” referred to in the Constitution. The bill avoids this dilemma by using a different phrase—“original works of authorship”—in characterizing the general subject matter of statutory copyright protection.
+
+    The history of copyright law has been one of gradual expansion in the types of works accorded protection, and the subject matter affected by this expansion has fallen into two general categories. In the first, scientific discoveries and technological developments have made possible new forms of creative expression that never existed before. In some of these cases the new expressive forms—electronic music, filmstrips, and computer programs, for example—could be regarded as an extension of copyrightable subject matter Congress had already intended to protect, and were thus considered copyrightable from the outset without the need of new legislation. In other cases, such as photographs, sound recordings, and motion pictures, statutory enactment was deemed necessary to give them full recognition as copyrightable works.
+
+    Authors are continually finding new ways of expressing themselves, but it is impossible to foresee the forms that these new expressive methods will take. The bill does not intend either to freeze the scope of copyrightable subject matter at the present stage of communications technology or to allow unlimited expansion into areas completely outside the present congressional intent. Section 102 implies neither that that subject matter is unlimited nor that new forms of expression within that general area of subject matter would necessarily be unprotected.
+
+    The historic expansion of copyright has also applied to forms of expression which, although in existence for generations or centuries, have only gradually come to be recognized as creative and worthy of protection. The first copyright statute in this country, enacted in 1790, designated only “maps, charts, and books”; major forms of expression such as music, drama, and works of art achieved specific statutory recognition only in later enactments. Although the coverage of the present statute is very broad, and would be broadened further by the explicit recognition of all forms of choreography, there are unquestionably other areas of existing subject matter that this bill does not propose to protect but that future Congresses may want to.
+
+    Fixation in Tangible Form. As a basic condition of copyright protection, the bill perpetuates the existing requirement that a work be fixed in a “tangible medium of expression,” and adds that this medium may be one “now known or later developed,” and that the fixation is sufficient if the work “can be perceived, reproduced, or otherwise communicated, either directly or with the aid of a machine or device.” This broad language is intended to avoid the artificial and largely unjustifiable distinctions, derived from cases such as White-Smith Publishing Co. v. Apollo Co., 209 U.S. 1 (1908) \[28 S.Ct. 319, 52 L.Ed. 655\], under which statutory copyrightability in certain cases has been made to depend upon the form or medium in which the work is fixed. Under the bill it makes no difference what the form, manner, or medium of fixation may be—whether it is in words, numbers, notes, sounds, pictures, or any other graphic or symbolic indicia, whether embodied in a physical object in written, printed, photographic, sculptural, punched, magnetic, or any other stable form, and whether it is capable of perception directly or by means of any machine or device “now known or later developed.”
+
+    Under the bill, the concept of fixation is important since it not only determines whether the provisions of the statute apply to a work, but it also represents the dividing line between common law and statutory protection. As will be noted in more detail in connection with section 301, an unfixed work of authorship, such as an improvisation or an unrecorded choreographic work, performance, or broadcast, would continue to be subject to protection under State common law or statute, but would not be eligible for Federal statutory protection under section 102.
+
+    The bill seeks to resolve, through the definition of “fixation” in section 101, the status of live broadcasts—sports, news coverage, live performances of music, etc.—that are reaching the public in unfixed form but that are simultaneously being recorded. When a football game is being covered by four television cameras, with a director guiding the activities of the four cameramen and choosing which of their electronic images are sent out to the public and in what order, there is little doubt that what the cameramen and the director are doing constitutes “authorship.” The further question to be considered is whether there has been a fixation. If the images and sounds to be broadcast are first recorded (on a video tape, film, etc.) and then transmitted, the recorded work would be considered a “motion picture” subject to statutory protection against unauthorized reproduction or retransmission of the broadcast. If the program content is transmitted live to the public while being recorded at the same time, the case would be treated the same; the copyright owner would not be forced to rely on common law rather than statutory rights in proceeding against an infringing user of the live broadcast.
+
+    Thus, assuming it is copyrightable—as a “motion picture” or “sound recording,” for example—the content of a live transmission should be regarded as fixed and should be accorded statutory protection if it is being recorded simultaneously with its transmission. On the other hand, the definition of “fixation” would exclude from the concept purely evanescent or transient reproductions such as those projected briefly on a screen, shown electronically on a television or other cathode ray tube, or captured momentarily in the “memory” of a computer.
+
+    Under the first sentence of the definition of “fixed” in section 101, a work would be considered “fixed in a tangible medium of expression” if there has been an authorized embodiment in a copy or phonorecord and if that embodiment “is sufficiently permanent or stable” to permit the work “to be perceived, reproduced, or otherwise communicated for a period of more than transitory duration.” The second sentence makes clear that, in the case of “a work consisting of sounds, images, or both, that are being transmitted,” the work is regarded as “fixed” if a fixation is being made at the same time as the transmission.
+
+    Under this definition “copies” and “phonorecords” together will comprise all of the material objects in which copyrightable works are capable of being fixed. The definitions of these terms in section 101, together with their usage in section 102 and throughout the bill, reflect a fundamental distinction between the “original work” which is the product of “authorship” and the multitude of material objects in which it can be embodied. Thus, in the sense of the bill, a “book” is not a work of authorship, but is a particular kind of “copy.” Instead, the author may write a “literary work,” which in turn can be embodied in a wide range of “copies” and “phonorecords,” including books, periodicals, computer punch cards, microfilm, tape recordings, and so forth. It is possible to have an “original work of authorship” without having a “copy” or “phonorecord” embodying it, and it is also possible to have a “copy” or “phonorecord” embodying something that does not qualify as an “original work of authorship.” The two essential elements—original work and tangible object—must merge through fixation in order to produce subject matter copyrightable under the statute.
+
+    Categories of Copyrightable Works. The second sentence of section 102 lists seven broad categories which the concept of “works of authorship” is said to “include”. The use of the word “include,” as defined in section 101, makes clear that the listing is “illustrative and not limitative,” and that the seven categories do not necessarily exhaust the scope of “original works of authorship” that the bill is intended to protect. Rather, the list sets out the general area of copyrightable subject matter, but with sufficient flexibility to free the courts from rigid or outmoded concepts of the scope of particular categories. The items are also overlapping in the sense that a work falling within one class may encompass works coming within some or all of the other categories. In the aggregate, the list covers all classes of works now specified in section 5 of title 17 \[section 5 of former title 17\]; in addition, it specifically enumerates “pantomimes and choreographic works”.
+
+    Of the seven items listed, four are defined in section 101. The three undefined categories—“musical works,” “dramatic works,” and “pantomimes and choreographic works”—have fairly settled meanings. There is no need, for example, to specify the copyrightability of electronic or concrete music in the statute since the form of a work would no longer be of any importance, nor is it necessary to specify that “choreographic works” do not include social dance steps and simple routines.
+
+    The four items defined in section 101 are “literary works,” “pictorial, graphic, and sculptural works,” “motion pictures and audiovisual works”, and “sound recordings”. In each of these cases, definitions are needed not only because the meaning of the term itself is unsettled but also because the distinction between “work” and “material object” requires clarification. The term “literary works” does not connote any criterion of literary merit or qualitative value: it includes catalogs, directories, and similar factual, reference, or instructional works and compilations of data. It also includes computer data bases, and computer programs to the extent that they incorporate authorship in the programmer’s expression of original ideas, as distinguished from the ideas themselves.
+
+    Correspondingly, the definition of “pictorial, graphic, and sculptural works” carries with it no implied criterion of artistic taste, aesthetic value, or intrinsic quality. The term is intended to comprise not only “works of art” in the traditional sense but also works of graphic art and illustration, art reproductions, plans and drawings, photographs and reproductions of them, maps, charts, globes, and other cartographic works, works of these kinds intended for use in advertising and commerce, and works of “applied art.” There is no intention whatever to narrow the scope of the subject matter now characterized in section 5(k) \[section 5(k) of former title 17\] as “prints or labels used for articles of merchandise.” However, since this terminology suggests the material object in which a work is embodied rather than the work itself, the bill does not mention this category separately.
+
+    In accordance with the Supreme Court’s decision in Mazer v. Stein, 347 U.S. 201 (1954) \[74 S.Ct. 460, 98 L. Ed. 630, rehearing denied 74 S.Ct. 637, 347 U.S. 949, 98 L.Ed. 1096\], works of “applied art” encompass all original pictorial, graphic, and sculptural works that are intended to be or have been embodied in useful articles, regardless of factors such as mass production, commercial exploitation, and the potential availability of design patent protection. The scope of exclusive rights in these works is given special treatment in section 113, to be discussed below.
+
+    The Committee has added language to the definition of “pictorial, graphic, and sculptural works” in an effort to make clearer the distinction between works of applied art protectable under the bill and industrial designs not subject to copyright protection. The declaration that “pictorial, graphic, and sculptural works” include “works of artistic craftsmanship insofar as their form but not their mechanical or utilitarian aspects are concerned” is classic language; it is drawn from Copyright Office regulations promulgated in the 1940’s and expressly endorsed by the Supreme Court in the Mazer case.
+
+    The second part of the amendment states that “the design of a useful article \* \* \* shall be considered a pictorial, graphic, or sculptural work only if, and only to the extent that, such design incorporates pictorial, graphic, or sculptural features that can be identified separately from, and are capable of existing independ­ently of, the utilitarian aspects of the article.” A “useful article” is defined as “an article having an intrinsic utilitarian function that is not merely to portray the appearance of the article or to convey information.” This part of the amendment is an adaptation of language added to the Copyright Office Regulations in the mid-1950’s in an effort to implement the Supreme Court’s decision in the Mazer case.
+
+    In adopting this amendatory language, the Committee is seeking to draw as clear a line as possible between copyrightable works of applied art and uncopy­righted works of industrial design. A two-dimensional painting, drawing, or graphic work is still capable of being identified as such when it is printed on or applied to utilitarian articles such as textile fabrics, wallpaper, containers, and the like. The same is true when a statue or carving is used to embellish an industrial product or, as in the Mazer case, is incorporated into a product without losing its ability to exist independently as a work of art. On the other hand, although the shape of an industrial product may be aesthetically satisfying and valuable, the Committee’s intention is not to offer it copyright protection under the bill. Unless the shape of an automobile, airplane, ladies’ dress, food processor, television set, or any other industrial product contains some element that, physically or conceptually, can be identified as separable from the utilitarian aspects of that article, the design would not be copyrighted under the bill. The test of separability and independence from “the utilitarian aspects of the article” does not depend upon the nature of the design—that is, even if the appearance of an article is determined by aesthetic (as opposed to functional) considerations, only elements, if any, which can be identified separately from the useful article as such are copyrightable. And, even if the three-dimensional design contains some such element (for example, a carving on the back of a chair or a floral relief design on silver flatware), copyright protection would extend only to that element, and would not cover the over-all configuration of the utilitarian article as such.
+
+    A special situation is presented by architectural works. An architect’s plans and drawings would, of course, be protected by copyright, but the extent to which that protection would extend to the structure depicted would depend on the circumstances. Purely nonfunctional or monumental structures would be subject to full copyright protection under the bill, and the same would be true of artistic sculpture or decorative ornamentation or embellishment added to a structure. On the other hand, where the only elements of shape in an architectural design are conceptually inseparable from the utilitarian aspects of the structure, copyright protection for the design would not be available.
+
+    The Committee has considered, but chosen to defer, the possibility of protecting the design of typefaces. A “typeface” can be defined as a set of letters, numbers, or other symbolic characters, whose forms are related by repeating design elements consistently applied in a notational system and are intended to be embodied in articles whose intrinsic utilitarian function is for use in composing text or other cognizable combinations of characters. The Committee does not regard the design of typeface, as thus defined, to be a copyrightable “pictorial, graphic, or sculptural work” within the meaning of this bill and the application of the dividing line in section 101.
+
+    Enactment of Public Law 92–140 in 1971 \[Pub. L. 92–140, Oct. 15, 1971, 85 Stat. 391, which amended sections 1, 5, 19, 20, 26, and 101 of former title 17, and enacted provisions set out as a note under section 1 of former title 17\] marked the first recognition in American copyright law of sound recordings as copy­rightable works. As defined in section 101, copyrightable “sound recordings” are original works of authorship comprising an aggregate of musical, spoken, or other sounds that have been fixed in tangible form. The copyrightable work comprises the aggregation of sounds and not the tangible medium of fixation. Thus, “sound recordings” as copyrightable subject matter are distinguished from “phonorecords,” the latter being physical objects in which sounds are fixed. They are also distinguished from any copyrighted literary, dramatic, or musical works that may be reproduced on a “phonorecord.”
+
+    As a class of subject matter, sound recordings are clearly within the scope of the “writings of an author” capable of protection under the Constitution \[Const. Art. I, § 8, cl. 8\], and the extension of limited statutory protection to them was too long delayed. Aside from cases in which sounds are fixed by some purely mechanical means without originality of any kind, the copyright protection that would prevent the reproduction and distribution of unauthorized phonorecords of sound recordings is clearly justified.
+
+    The copyrightable elements in a sound recording will usually, though not always, involve “authorship” both on the part of the performers whose performance is captured and on the part of the record pro­ducer responsible for setting up the recording session, capturing and electronically processing the sounds, and compiling and editing them to make the final sound recording. There may, however, be cases where the record producer’s contribution is so minimal that the performance is the only copyrightable element in the work, and there may be cases (for example, recordings of birdcalls, sounds of racing cars, et cetera) where only the record producer’s contribution is copy­rightable.
+
+    Sound tracks of motion pictures, long a nebulous area in American copyright law, are specifically included in the definition of “motion pictures,” and excluded in the definition of “sound recordings.” To be a “motion picture,” as defined, requires three elements: (1) a series of images, (2) the capability of showing the images in certain successive order, and (3) an impression of motion when the images are thus shown. Coupled with the basic requirements of original authorship and fixation in tangible form, this definition encompasses a wide range of cinematographic works embodied in films, tapes, video disks, and other media. However, it would not include: (1) unauthorized fixations of live performances or telecasts, (2) live telecasts that are not fixed simultaneously with their transmission, or (3) filmstrips and slide sets which, although consisting of a series of images intended to be shown in succession, are not capable of conveying an impression of motion.
+
+    On the other hand, the bill equates audiovisual materials such as filmstrips, slide sets, and sets of trans­parencies with “motion pictures” rather than with “pictorial, graphic, and sculptural works.” Their sequential showing is closer to a “performance” than to a “display,” and the definition of “audiovisual works,” which applies also to “motion pictures,” embraces works consisting of a series of related images that are by their nature, intended for showing by means of projectors or other devices.
+
+    Nature of Copyright. Copyright does not preclude others from using the ideas or information revealed by the author’s work. It pertains to the literary, musical, graphic, or artistic form in which the author expressed intellectual concepts. Section 102(b) makes clear that copyright protection does not extend to any idea, procedure, process, system, method of operation, concept, principle, or discovery, regardless of the form in which it is described, explained, illustrated, or embodied in such work.
+
+    Some concern has been expressed lest copyright in computer programs should extend protection to the methodology or processes adopted by the programmer, rather than merely to the “writing” expressing his ideas. Section 102(b) is intended, among other things, to make clear that the expression adopted by the programmer is the copyrightable element in a computer program, and that the actual processes or methods embodied in the program are not within the scope of the copyright law.
+
+    Section 102(b) in no way enlarges or contracts the scope of copyright protection under the present law. Its purpose is to restate, in the context of the new single Federal system of copyright, that the basic dichotomy between expression and idea remains unchanged.
+
+ Amendments
+
+    1990—Subsec. (a)(8). Pub. L. 101–650 added par. (8).
+
+ Effective Date of 1990 Amendment
+
+    Amendment by Pub. L. 101–650 applicable to any architectural work created on or after Dec. 1, 1990, and any architectural work, that, on Dec. 1, 1990, is unconstructed and embodied in unpublished plans or drawings, except that protection for such architectural work under this title terminates on Dec. 31, 2002, unless the work is constructed by that date, see section 706 of Pub. L. 101–650, set out as a note under section 101 of this title.
+
+================================================================================
+
+§ 106. Exclusive rights in copyrighted works
+
+    Subject to sections 107 through 122, the owner of copyright under this title has the exclusive rights to do and to authorize any of the following:
+
+    (1) to reproduce the copyrighted work in copies or phonorecords;
+
+    (2) to prepare derivative works based upon the copyrighted work;
+
+    (3) to distribute copies or phonorecords of the copyrighted work to the public by sale or other transfer of ownership, or by rental, lease, or lending;
+
+    (4) in the case of literary, musical, dramatic, and choreographic works, pantomimes, and motion pictures and other audiovisual works, to perform the copyrighted work publicly;
+
+    (5) in the case of literary, musical, dramatic, and choreographic works, pantomimes, and pictorial, graphic, or sculptural works, including the individual images of a motion picture or other audiovisual work, to display the copyrighted work publicly; and
+
+    (6) in the case of sound recordings, to perform the copyrighted work publicly by means of a digital audio transmission.
+
+(Pub. L. 94–553, title I, § 101, Oct. 19, 1976, 90 Stat. 2546; Pub. L. 101–318, § 3(d), July 3, 1990, 104 Stat. 288; Pub. L. 101–650, title VII, § 704(b)(2), Dec. 1, 1990, 104 Stat. 5134; Pub. L. 104–39, § 2, Nov. 1, 1995, 109 Stat. 336; Pub. L. 106–44, § 1(g)(2), Aug. 5, 1999, 113 Stat. 222; Pub. L. 107–273, div. C, title III, § 13210(4)(A), Nov. 2, 2002, 116 Stat. 1909.)
+
+ Historical and Revision Notes
+
+ house report no. 94–1476
+
+    General Scope of Copyright. The five fundamental rights that the bill gives to copyright owners—the exclusive rights of reproduction, adaptation, publication, performance, and display—are stated generally in section 106. These exclusive rights, which comprise the so-called “bundle of rights” that is a copyright, are cumulative and may overlap in some cases. Each of the five enumerated rights may be subdivided indefinitely and, as discussed below in connection with section 201, each subdivision of an exclusive right may be owned and enforced separately.
+
+    The approach of the bill is to set forth the copyright owner’s exclusive rights in broad terms in section 106, and then to provide various limitations, qualifications, or exemptions in the 12 sections that follow. Thus, everything in section 106 is made “subject to sections 107 through 118”, and must be read in conjunction with those provisions.
+
+    The exclusive rights accorded to a copyright owner under section 106 are “to do and to authorize” any of the activities specified in the five numbered clauses. Use of the phrase “to authorize” is intended to avoid any questions as to the liability of contributory infringers. For example, a person who lawfully acquires an authorized copy of a motion picture would be an infringer if he or she engages in the business of renting it to others for purposes of unauthorized public performance.
+
+    Rights of Reproduction, Adaptation, and Publication. The first three clauses of section 106, which cover all rights under a copyright except those of performance and display, extend to every kind of copyrighted work. The exclusive rights encompassed by these clauses, though closely related, are independent; they can generally be characterized as rights of copying, recording, adaptation, and publishing. A single act of infringement may violate all of these rights at once, as where a publisher reproduces, adapts, and sells copies of a person’s copyrighted work as part of a publishing venture. Infringement takes place when any one of the rights is violated: where, for example, a printer reproduces copies without selling them or a retailer sells copies without having anything to do with their reproduction. The references to “copies or phonorecords,” although in the plural, are intended here and throughout the bill to include the singular (1 U.S.C. § 1).
+
+    Reproduction.—Read together with the relevant definitions in section 101, the right “to reproduce the copyrighted work in copies or phonorecords” means the right to produce a material object in which the work is duplicated, transcribed, imitated, or simulated in a fixed form from which it can be “perceived, reproduced, or otherwise communicated, either directly or with the aid of a machine or device.” As under the present law, a copyrighted work would be infringed by reproducing it in whole or in any substantial part, and by duplicating it exactly or by imitation or simulation. Wide departures or variations from the copyrighted work would still be an infringement as long as the author’s “expression” rather than merely the author’s “ideas” are taken. An exception to this general principle, applicable to the reproduction of copyrighted sound recordings, is specified in section 114.
+
+    “Reproduction” under clause (1) of section 106 is to be distinguished from “display” under clause (5). For a work to be “reproduced,” its fixation in tangible form must be “sufficiently permanent or stable to permit it to be perceived, reproduced, or otherwise communicated for a period of more than transitory duration.” Thus, the showing of images on a screen or tube would not be a violation of clause (1), although it might come within the scope of clause (5).
+
+    Preparation of Derivative Works.—The exclusive right to prepare derivative works, specified separately in clause (2) of section 106, overlaps the exclusive right of reproduction to some extent. It is broader than that right, however, in the sense that reproduction requires fixation in copies or phonorecords, whereas the preparation of a derivative work, such as a ballet, pantomime, or improvised performance, may be an infringement even though nothing is ever fixed in tangible form.
+
+    To be an infringement the “derivative work” must be “based upon the copyrighted work,” and the definition in section 101 refers to “a translation, musical arrangement, dramatization, fictionalization, motion picture version, sound recording, art reproduction, abridgment, condensation, or any other form in which a work may be recast, transformed, or adapted.” Thus, to constitute a violation of section 106(2), the infringing work must incorporate a portion of the copyrighted work in some form; for example, a detailed commentary on a work or a programmatic musical composition inspired by a novel would not normally constitute infringements under this clause.
+
+    Use in Information Storage and Retrieval Systems.—As section 117 declares explicitly, the bill is not intended to alter the present law with respect to the use of copyrighted works in computer systems.
+
+    Public Distribution.—Clause (3) of section 106 establishes the exclusive right of publication: The right “to distribute copies or phonorecords of the copyrighted work to the public by sale or other transfer of ownership, or by rental, lease, or lending.” Under this provision the copyright owner would have the right to control the first public distribution of an authorized copy or phonorecord of his work, whether by sale, gift, loan, or some rental or lease arrangement. Likewise, any unauthorized public distribution of copies or phonorecords that were unlawfully made would be an infringement. As section 109 makes clear, however, the copyright owner’s rights under section 106(3) cease with respect to a particular copy or phonorecord once he has parted with ownership of it.
+
+    Rights of Public Performance and Display. Performing Rights and the “For Profit” Limitation.—The right of public performance under section 106(4) extends to “literary, musical, dramatic, and choreographic works, pantomimes, and motion pictures and other audiovisual works and sound recordings” and, unlike the equivalent provisions now in effect, is not limited by any “for profit” requirement. The approach of the bill, as in many foreign laws, is first to state the public performance right in broad terms, and then to provide specific exemptions for educational and other nonprofit uses.
+
+    This approach is more reasonable than the outright exemption of the 1909 statute. The line between commercial and “nonprofit” organizations is increasingly difficult to draw. Many “non-profit” organizations are highly subsidized and capable of paying royalties, and the widespread public exploitation of copyrighted works by public broadcasters and other noncommercial organizations is likely to grow. In addition to these trends, it is worth noting that performances and displays are continuing to supplant markets for printed copies and that in the future a broad “not for profit” exemption could not only hurt authors but could dry up their incentive to write.
+
+    The exclusive right of public performance is expanded to include not only motion pictures, including works recorded on film, video tape, and video disks, but also audiovisual works such as filmstrips and sets of slides. This provision of section 106(4), which is consistent with the assimilation of motion pictures to audiovisual works throughout the bill, is also related to amendments of the definitions of “display” and “perform” discussed below. The important issue of performing rights in sound recordings is discussed in connection with section 114.
+
+    Right of Public Display.—Clause (5) of section 106 represents the first explicit statutory recognition in American copyright law of an exclusive right to show a copyrighted work, or an image of it, to the public. The existence or extent of this right under the present statute is uncertain and subject to challenge. The bill would give the owners of copyright in “literary, musical, dramatic, and choreographic works, pantomimes, and pictorial, graphic, or sculptural works”, including the individual images of a motion picture or other audiovisual work, the exclusive right “to display the copyrighted work publicly.”
+
+Definitions. Under the definitions of “perform,” “display,” “publicly,” and “transmit” in section 101, the concepts of public performance and public display cover not only the initial rendition or showing, but also any further act by which that rendition or showing is transmitted or communicated to the public. Thus, for example: a singer is performing when he or she sings a song; a broadcasting network is performing when it transmits his or her performance (whether simultaneously or from records); a local broadcaster is performing when it transmits the network broadcast; a cable television system is performing when it retransmits the broadcast to its subscribers; and any individual is performing whenever he or she plays a phonorecord embodying the performance or communicates the performance by turning on a receiving set. Although any act by which the initial performance or display is transmitted, repeated, or made to recur would itself be a “performance” or “display” under the bill, it would not be actionable as an infringement unless it were done “publicly,” as defined in section 101. Certain other performances and displays, in addition to those that are “private,” are exempted or given qualified copyright control under sections 107 through 118.
+
+    To “perform” a work, under the definition in section 101, includes reading a literary work aloud, singing or playing music, dancing a ballet or other choreographic work, and acting out a dramatic work or pantomime. A performance may be accomplished “either directly or by means of any device or process,” including all kinds of equipment for reproducing or amplifying sounds or visual images, any sort of transmitting apparatus, any type of electronic retrieval system, and any other techniques and systems not yet in use or even­ invented.
+
+    The definition of “perform” in relation to “a motion picture or other audiovisual work” is “to show its images in any sequence or to make the sounds accompanying it audible.” The showing of portions of a motion picture, filmstrip, or slide set must therefore be sequential to constitute a “performance” rather than a “display”, but no particular order need be maintained. The purely aural performance of a motion picture sound track, or of the sound portions of an audiovisual work, would constitute a performance of the “motion picture or other audiovisual work”; but, where some of the sounds have been reproduced separately on phonorecords, a performance from the phonorecord would not constitute performance of the motion picture or audiovisual work.
+
+    The corresponding definition of “display” covers any showing of a “copy” of the work, “either directly or by means of a film, slide, television image, or any other device or process.” Since “copies” are defined as including the material object “in which the work is first fixed,” the right of public display applies to original works of art as well as to reproductions of them. With respect to motion pictures and other audiovisual works, it is a “display” (rather than a “performance”) to show their “individual images nonsequentially.” In addition to the direct showings of a copy of a work, “display” would include the projection of an image on a screen or other surface by any method, the transmission of an image by electronic or other means, and the showing of an image on a cathode ray tube, or similar viewing apparatus connected with any sort of information storage and retrieval system.
+
+    Under clause (1) of the definition of “publicly” in section 101, a performance or display is “public” if it takes place “at a place open to the public or at any place where a substantial number of persons outside of a normal circle of a family and its social acquaintances is gathered.” One of the principal purposes of the definition was to make clear that, contrary to the decision in Metro-Goldwyn-Mayer Distributing Corp. v. Wyatt, 21 C.O.Bull. 203 (D.Md.1932), performances in “semipublic” places such as clubs, lodges, factories, summer camps, and schools are “public performances” subject to copyright control. The term “a family” in this context would include an individual living alone, so that a gathering confined to the individual’s social acquaintances would normally be regarded as private. Routine meetings of businesses and governmental personnel would be excluded because they do not represent the gathering of a “substantial number of persons.”
+
+    Clause (2) of the definition of “publicly” in section 101 makes clear that the concepts of public performance and public display include not only performances and displays that occur initially in a public place, but also acts that transmit or otherwise communicate a performance or display of the work to the public by means of any device or process. The definition of “transmit”—to communicate a performance or display “by any device or process whereby images or sound are received beyond the place from which they are sent”—is broad enough to include all conceivable forms and combinations of wired or wireless communications media, including but by no means limited to radio and television broadcasting as we know them. Each and every method by which the images or sounds comprising a performance or display are picked up and conveyed is a “transmission,” and if the transmission reaches the public in my \[any\] form, the case comes within the scope of clauses (4) or (5) of section 106.
+
+    Under the bill, as under the present law, a performance made available by transmission to the public at large is “public” even though the recipients are not gathered in a single place, and even if there is no proof that any of the potential recipients was operating his receiving apparatus at the time of the transmission. The same principles apply whenever the potential recipients of the transmission represent a limited segment of the public, such as the occupants of hotel rooms or the subscribers of a cable television service. Clause (2) of the definition of “publicly” is applicable “whether the members of the public capable of receiving the performance or display receive it in the same place or in separate places and at the same time or at different times.”
+
+ Amendments
+
+    2002—Pub. L. 107–273 substituted “122” for “121” in introductory provisions.
+
+    1999—Pub. L. 106–44 substituted “121” for “120” in introductory provisions.
+
+    1995—Par. (6). Pub. L. 104–39 added par. (6).
+
+    1990—Pub. L. 101–650 substituted “120” for “119” in introductory provisions.
+
+    Pub. L. 101–318 substituted “119” for “118” in introductory provisions.
+
+ Effective Date of 1995 Amendment
+
+    Amendment by Pub. L. 104–39 effective 3 months after Nov. 1, 1995, see section 6 of Pub. L. 104–39, set out as a note under section 101 of this title.
+
+ Effective Date of 1990 Amendment
+
+    Amendment by Pub. L. 101–650 applicable to any architectural work created on or after Dec. 1, 1990, and any architectural work, that, on Dec. 1, 1990, is unconstructed and embodied in unpublished plans or drawings, except that protection for such architectural work under this title terminates on Dec. 31, 2002, unless the work is constructed by that date, see section 706 of Pub. L. 101–650, set out as a note under section 101 of this title.
+
+Pub. L. 101–318, § 3(e)(3), July 3, 1990, 104 Stat. 289, provided that:
+
+> “The amendment made by subsection (d) \[amending this section\] shall be effective as of November 16, 1988.”
+
+================================================================================
+
+§ 302. Duration of copyright: Works created on or after January 1, 1978
+
+    (a)  In General  .—
+
+    Copyright in a work created on or after January 1, 1978, subsists from its creation and, except as provided by the following subsections, endures for a term consisting of the life of the author and 70 years after the author’s death.
+
+    (b)  Joint Works  .—
+
+    In the case of a joint work prepared by two or more authors who did not work for hire, the copyright endures for a term consisting of the life of the last surviving author and 70 years after such last surviving author’s death.
+
+    (c)  Anonymous Works, Pseudonymous Works, and Works Made for Hire  .—
+
+    In the case of an anonymous work, a pseudonymous work, or a work made for hire, the copyright endures for a term of 95 years from the year of its first publication, or a term of 120 years from the year of its creation, whichever expires first. If, before the end of such term, the identity of one or more of the authors of an anonymous or pseudonymous work is revealed in the records of a registration made for that work under subsections (a) or (d) of section 408, or in the records provided by this subsection, the copyright in the work endures for the term specified by subsection (a) or (b), based on the life of the author or authors whose identity has been revealed. Any person having an interest in the copyright in an anonymous or pseudonymous work may at any time record, in records to be maintained by the Copyright Office for that purpose, a statement identifying one or more authors of the work; the statement shall also identify the person filing it, the nature of that person’s interest, the source of the information recorded, and the particular work affected, and shall comply in form and content with requirements that the Register of Copyrights shall prescribe by regulation.
+
+    (d)  Records Relating to Death of Authors  .—
+
+    Any person having an interest in a copyright may at any time record in the Copyright Office a statement of the date of death of the author of the copyrighted work, or a statement that the author is still living on a particular date. The statement shall identify the person filing it, the nature of that person’s interest, and the source of the information recorded, and shall comply in form and content with requirements that the Register of Copyrights shall prescribe by regulation. The Register shall maintain current records of information relating to the death of authors of copyrighted works, based on such recorded statements and, to the extent the Register considers practicable, on data contained in any of the records of the Copyright Office or in other reference sources.
+
+    (e)  Presumption as to Author’s Death  .—
+
+    After a period of 95 years from the year of first publication of a work, or a period of 120 years from the year of its creation, whichever expires first, any person who obtains from the Copyright Office a certified report that the records provided by subsection (d) disclose nothing to indicate that the author of the work is living, or died less than 70 years before, is entitled to the benefits of a presumption that the author has been dead for at least 70 years. Reliance in good faith upon this presumption shall be a complete defense to any action for infringement under this title.
+
+(Pub. L. 94–553, title I, § 101, Oct. 19, 1976, 90 Stat. 2572; Pub. L. 105–298, title I, § 102(b), Oct. 27, 1998, 112 Stat. 2827.)
+
+ Historical and Revision Notes
+
+ house report no. 94–1476
+
+    In General. The debate over how long a copyright should last is as old as the oldest copyright statute and will doubtless continue as long as there is a copyright law. With certain exceptions, there appears to be strong support for the principle, as embodied in the bill, of a copyright term consisting of the life of the author and 50 years after his death. In particular, the authors and their representatives stressed that the adoption of a life-plus-50 term was by far their most important legislative goal in copyright law revision. The Register of Copyrights now regards a life-plus-50 term as the foundation of the entire bill.
+
+    Under the present law statutory copyright protection begins on the date of publication (or on the date of registration in unpublished form) and continues for 28 years from that date; it may be renewed for a second 28 years, making a total potential term of 56 years in all cases. \[Under Public Laws 87–668, 89–142, 90–141, 90–416, 91–147, 91–555, 92–170, 92–566, and 93–573, copyrights that were subsisting in their renewal term on September 19, 1962, and that were scheduled to expire before Dec. 31, 1976, have been extended to that later date, in anticipation that general revision legislation extending their terms still further will be enacted by then.\] The principal elements of this system—a definite number of years, computed from either publication or registration, with a renewal feature—have been a part of the U.S. copyright law since the first statute in 1790. The arguments for changing this system to one based on the life of the author can be summarized as follows:
+
+    1. The present 56-year term is not long enough to insure an author and his dependents the fair economic benefits from his works. Life expectancy has increased substantially, and more and more authors are seeing their works fall into the public domain during their lifetimes, forcing later works to compete with their own early works in which copyright has expired.
+
+    2. The tremendous growth in communications media has substantially lengthened the commercial life of a great many works. A short term is particularly discriminatory against serious works of music, literature, and art, whose value may not be recognized until after many years.
+
+    3. Although limitations on the term of copyright are obviously necessary, too short a term harms the author without giving any substantial benefit to the public. The public frequently pays the same for works in the public domain as it does for copyrighted works, and the only result is a commercial windfall to certain users at the author’s expense. In some cases the lack of copyright protection actually restrains dissemination of the work, since publishers and other users cannot risk investing in the work unless assured of exclusive rights.
+
+    4. A system based on the life of the author would go a long way toward clearing up the confusion and uncertainty involved in the vague concept of “publication,” and would provide a much simpler, clearer method for computing the term. The death of the author is a definite, determinable event, and it would be the only date that a potential user would have to worry about. All of a particular author’s works, including successive revisions of them, would fall into the public domain at the same time, thus avoiding the present problems of determining a multitude of publication dates and of distinguishing “old” and “new” matter in later editions. The bill answers the problems of determining when relatively obscure authors died, by establishing a registry of death dates and a system of presumptions.
+
+    5. One of the worst features of the present copyright law is the provision for renewal of copyright. A substantial burden and expense, this unclear and highly technical requirement results in incalculable amounts of unproductive work. In a number of cases it is the cause of inadvertent and unjust loss of copyright. Under a life-plus-50 system the renewal device would be inappropriate and unnecessary.
+
+    6. Under the preemption provisions of section 301 and the single Federal system they would establish, authors will be giving up perpetual, unlimited exclusive common law rights in their unpublished works, including works that have been widely disseminated by means other than publication. A statutory term of life-plus-50 years is no more than a fair recompense for the loss of these perpetual rights.
+
+    7. A very large majority of the world’s countries have adopted a copyright term of the life of the author and 50 years after the author’s death. Since American authors are frequently protected longer in foreign countries than in the United States, the disparity in the duration of copyright has provoked considerable resentment and some proposals for retaliatory legislation. Copyrighted works move across national borders faster and more easily than virtually any other economic commodity, and with the techniques now in common use this movement has in many cases become instantaneous and effortless. The need to conform the duration of U.S. copyright to that prevalent throughout the rest of the world is increasingly pressing in order to provide certainty and simplicity in international business dealings. Even more important, a change in the basis of our copyright term would place the United States in the forefront of the international copyright community. Without this change, the possibility of future United States adherence to the Berne Copyright Union would evaporate, but with it would come a great and immediate improvement in our copyright relations. All of these benefits would accrue directly to American and foreign authors alike.
+
+    The need for a longer total term of copyright has been conclusively demonstrated. It is true that a major reason for the striking statistical increase in life expectancy since 1909 is the reduction in infant mortality, but this does not mean that the increase can be discounted. Although not nearly as great as the total increase in life expectancy, there has been a marked increase in longevity, and with medical discoveries and health programs for the elderly this trend shows every indication of continuing. If life expectancy in 1909, which was in the neighborhood of 56 years, offered a rough guide to the length of copyright protection, then life expectancy in the 1970’s which is well over 70 years, should offer a similar guide; the Register’s 1961 Report included statistics indicating that something between 70 and 76 years was then the average equivalent of life-plus-50 years. A copyright should extend beyond the author’s lifetime, and judged by this standard the present term of 56 years is too short.
+
+    The arguments as to the benefits of uniformity with foreign laws, and the advantages of international comity that would result from adoption of a life-plus-50 term, are also highly significant. The system has worked well in other countries, and on the whole it would appear to make computation of terms considerably simpler and easier. The registry of death dates and the system of presumptions established in section 302 would solve most of the problems in determining when an individual author died.
+
+    No country in the world has provisions on the duration of copyright like ours. Virtually every other copyright law in the world bases the term of protection for works by natural persons on the life of the author, and a substantial majority of these accord protection for 50 years after the author’s death. This term is required for adherence to the Berne Convention. It is worth noting that the 1965 revision of the copyright law of the Federal Republic of Germany adopted a term of life plus 70 years.
+
+    A point that has concerned some educational groups arose from the possibility that, since a large majority (now about 85 percent) of all copyrighted works are not renewed, a life-plus-50 year term would tie up a substantial body of material that is probably of no commercial interest but that would be more readily available for scholarly use if free of copyright restrictions. A statistical study of renewal registrations made by the Copyright Office in 1966 supports the generalization that most material which is considered to be of continuing or potential commercial value is renewed. Of the remainder, a certain proportion is of practically no value to anyone, but there are a large number of unrenewed works that have scholarly value to historians, archivists, and specialists in a variety of fields. This consideration lay behind the proposals for retaining the renewal device or for limiting the term for unpublished or unregistered works.
+
+    It is true that today’s ephemera represent tomorrow’s social history, and that works of scholarly value, which are now falling into the public domain after 28 years, would be protected much longer under the bill. Balanced against this are the burdens and expenses of renewals, the near impossibility of distinguishing between types of works in fixing a statutory term, and the extremely strong case in favor of a life-plus-50 system. Moreover, it is important to realize that the bill would not restrain scholars from using any work as source material or from making “fair use” of it; the restrictions would extend only to the unauthorized reproduction or distribution of copies of the work, its public performance, or some other use that would actually infringe the copyright owner’s exclusive rights. The advantages of a basic term of copyright enduring for the life of the author and for 50 years after the author’s death outweigh any possible disadvantages.
+
+    Basic Copyright Term. Under subsection (a) of section 302, a work “created” on or after the effective date of the revised statute \[Jan. 1, 1978\] would be protected by statutory copyright “from its creation” and, with exceptions to be noted below, “endures for a term consisting of the life of the author and 50 years after the author’s death.”
+
+    Under this provision, as a general rule, the life-plus-50 term would apply equally to unpublished works, to works published during the author’s lifetime, and to works published posthumously.
+
+    The definition of “created” in section 101, which will be discussed in more detail in connection with section 302(c) below, makes clear that “creation” for this purpose means the first time the work is fixed in a copy or phonorecord; up to that point the work is not “created,” and is subject to common law protection, even though it may exist in someone’s mind and may have been communicated to others in unfixed form.
+
+    Joint Works. Since by definition a “joint work” has two or more authors, a statute basing the term of copyright on the life of the author must provide a special method of computing the term of “joint works.” Under the system in effect in many foreign countries, the term of copyright is measured from the death of the last survivor of a group of joint authors, no matter how many there are. The bill adopts this system as the simplest and fairest of the alternatives for dealing with the problem.
+
+    Anonymous Works, Pseudonymous Works, and Works Made for Hire. Computing the term from the author’s death also requires special provisions to deal with cases where the authorship is not revealed or where the “author” is not an individual. Section 302(c) therefore provides a special term for anonymous works, pseudonymous works, and works made for hire: 75 years from publication or 100 years from creation, whichever is shorter. The definitions in section 101 make the status of anonymous and pseudonymous works depend on what is revealed on the copies or phonorecords of a work; a work is “anonymous” if “no natural person is identified as author,” and is “pseudonymous” if “the author is identified under a fictitious name.”
+
+    Section 302(c) provides that the 75- and 100-year terms for an anonymous or pseudonymous work can be converted to the ordinary life-plus-50 term if “the identity of one or more authors \* \* \* is revealed” in special records maintained for this purpose in the Copyright Office. The term in such cases would be “based on the life of the author or authors whose identity has been revealed.” Instead of forcing a user to search through countless Copyright Office records to determine if an author’s identity has been revealed, the bill sets up a special registry for the purpose, with requirements concerning the filing of identifying statements that parallel those of the following subsection (d) with respect to statements of the date of an author’s death.
+
+    The alternative terms established in section 302(c)—75 years from publication or 100 years from creation, whichever expires first—are necessary to set a time limit on protection of unpublished material. For example, copyright in a work created in 1978 and published in 1988 would expire in 2063 (75 years from publication). A question arises as to when the copyright should expire if the work is never published. Both the Constitution and the underlying purposes of the bill require the establishment of an alternative term for unpublished work and the only practicable basis for this alternative is “creation.” Under the bill a work created in 1980 but not published until after 2005 (or never published) would fall into the public domain in 2080 (100 years after creation).
+
+    The definition in section 101 provides that “creation” takes place when a work “is fixed in a copy or phonorecord for the first time.” Although the concept of “creation” is inherently lacking in precision, its adoption in the bill would, for example, enable a scholar to use an unpublished manuscript written anonymously, pseudonymously, or for hire, if he determines on the basis of internal or external evidence that the manuscript is at least 100 years old. In the case of works written over a period of time or in successive revised versions, the definition provides that the portion of the work “that has been fixed at any particular time constitutes the work as of that time,” and that, “where the work has been prepared in different versions, each version constitutes a separate work.” Thus, a scholar or other user, in attempting to determine whether a particular work is in the public domain, needs to look no further than the particular version he wishes to use.
+
+    Although “publication” would no longer play the central role assigned to it under the present law, the concept would still have substantial significance under provisions throughout the bill, including those on Federal preemption and duration. Under the definition in section 101, a work is “published” if one or more copies or phonorecords embodying it are distributed to the public—that is, generally to persons under no explicit or implicit restrictions with respect to disclosure of its contents—without regard to the manner in which the copies or phonorecords changed hands. The definition clears up the question of whether the sale of phonorecords constitutes publication, and it also makes plain that any form or dissemination in which a material object does not change hands—performances or displays on television, for example—is not a publication no matter how many people are exposed to the work. On the other hand, the definition also makes clear that, when copies or phonorecords are offered to a group of wholesalers, broadcasters, motion picture theaters, etc., publication takes place if the purpose is “further distribution, public performance, or public display.”
+
+    Although the periods of 75 or 100 years for anonymous and pseudonymous works and works made for hire seem to be longer than the equivalent term provided by foreign laws and the Berne Conventions, this difference is more apparent than real. In general, the terms in these special cases approximate, on the average, the term of the life of the author plus 50 years established for other works. The 100-year maximum term for unpublished works, although much more limited than the perpetual term now available under common law in the United States and under statute in some foreign countries, is sufficient to guard against unjustified invasions of privacy and to fulfill our obligations under the Universal Copyright Convention.
+
+    Records and Presumption as to Author’s Death. Subsections (d) and (e) of section 302 together furnish an answer to the practical problems of how to discover the death dates of obscure or unknown authors. Subsection (d) provides a procedure for recording statements that an author died, or that he was still living, on a particular date, and also requires the Register of Copyrights to maintain obituary records on a current basis. Under subsection (e) anyone who, after a specified period, obtains certification from the Copyright Office that its records show nothing to indicate that the author is living or died less than 50 years before, is entitled to rely upon a presumption that the author has been dead for more than 50 years. The period specified in subsection (e)—75 years from publication or 100 years from creation—is purposely uniform with the special term provided in subsection (c).
+
+ Amendments
+
+    1998—Subsecs. (a), (b). Pub. L. 105–298, § 102(b)(1), (2), substituted “70” for “fifty”.
+
+    Subsec. (c). Pub. L. 105–298, § 102(b)(3), in first sentence, substituted “95” for “seventy-five” and “120” for “one hundred”.
+
+    Subsec. (e). Pub. L. 105–298, § 102(b)(4), in first sentence, substituted “95” for “seventy-five”, “120” for “one hundred”, and “70” for “fifty” in two places.
+
+================================================================================
+
+§ 303. Duration of copyright: Works created but not published or copyrighted before January 1, 1978
+
+    (a) Copyright in a work created before January 1, 1978, but not theretofore in the public domain or copyrighted, subsists from January 1, 1978, and endures for the term provided by section 302. In no case, however, shall the term of copyright in such a work expire before December 31, 2002; and, if the work is published on or before December 31, 2002, the term of copyright shall not expire before December 31, 2047.
+
+    (b) The distribution before January 1, 1978, of a phonorecord shall not for any purpose constitute a publication of any musical work, dramatic work, or literary work embodied therein.
+
+(Pub. L. 94–553, title I, § 101, Oct. 19, 1976, 90 Stat. 2573; Pub. L. 105–80, § 11, Nov. 13, 1997, 111 Stat. 1534; Pub. L. 105–298, title I, § 102(c), Oct. 27, 1998, 112 Stat. 2827; Pub. L. 111–295, § 5(a), Dec. 9, 2010, 124 Stat. 3181.)
+
+ Historical and Revision Notes
+
+ house report no. 94–1476
+
+    Theoretically, at least, the legal impact of section 303 would be far reaching. Under it, every “original work of authorship” fixed in tangible form that is in existence would be given statutory copyright protection as long as the work is not in the public domain in this country. The vast majority of these works consist of private material that no one is interested in protecting or infringing, but section 303 would still have practical effects for a prodigious body of material already in existence.
+
+    Looked at another way, however, section 303 would have a genuinely restrictive effect. Its basic purpose is to substitute statutory for common law copyright for everything now protected at common law, and to substitute reasonable time limits for the perpetual protection now available. In general, the substituted time limits are those applicable to works created after the effective date of the law \[Jan. 1, 1978\]; for example, an unpublished work written in 1945 whose author dies in 1980 would be protected under the statute from the effective date \[Jan. 1, 1978\] through 2030 (50 years after the author’s death).
+
+    A special problem under this provision is what to do with works whose ordinary statutory terms will have expired or will be nearing expiration on the effective date \[Jan. 1, 1978\]. The committee believes that a provision taking away subsisting common law rights and substituting statutory rights for a reasonable period is fully in harmony with the constitutional requirements of due process, but it is necessary to fix a “reasonable period” for this purpose. Section 303 provides that under no circumstances would copyright protection expire before December 31, 2002, and also attempts to encourage publication by providing 25 years more protection (through 2027) if the work were published before the end of 2002.
+
+ Amendments
+
+    2010—Subsec. (b). Pub. L. 111–295 substituted “any musical work, dramatic work, or literary work” for “the musical work”.
+
+    1998—Subsec. (a). Pub. L. 105–298 substituted “December 31, 2047” for “December 31, 2027” in second sentence.
+
+    1997—Pub. L. 105–80 designated existing provisions as subsec. (a) and added subsec. (b).
+
+================================================================================
+
+§ 304. Duration of copyright: Subsisting copyrights
+
+    (a)  Copyrights in Their First Term on January  1, 1978.—
+
+        (1)
+
+            (A) Any copyright, the first term of which is subsisting on January 1, 1978, shall endure for 28 years from the date it was originally secured.
+
+            (B)
+
+             In the case of—
+
+                (i) any posthumous work or of any periodical, cyclopedic, or other composite work upon which the copyright was originally secured by the proprietor thereof, or
+
+                (ii) any work copyrighted by a corporate body (otherwise than as assignee or licensee of the individual author) or by an employer for whom such work is made for hire,
+
+                the proprietor of such copyright shall be entitled to a renewal and extension of the copyright in such work for the further term of 67 years.
+
+            (C)
+
+             In the case of any other copyrighted work, including a contribution by an individual author to a periodical or to a cyclopedic or other composite work—
+
+                (i) the author of such work, if the author is still living,
+
+                (ii) the widow, widower, or children of the author, if the author is not living,
+
+                (iii) the author’s executors, if such author, widow, widower, or children are not living, or
+
+                (iv) the author’s next of kin, in the absence of a will of the author,
+
+                shall be entitled to a renewal and extension of the copyright in such work for a further term of 67 years.
+
+        (2)
+
+            (A)
+
+             At the expiration of the original term of copyright in a work specified in paragraph (1)(B) of this subsection, the copyright shall endure for a renewed and extended further term of 67 years, which—
+
+                (i) if an application to register a claim to such further term has been made to the Copyright Office within 1 year before the expiration of the original term of copyright, and the claim is registered, shall vest, upon the beginning of such further term, in the proprietor of the copyright who is entitled to claim the renewal of copyright at the time the application is made; or
+
+                (ii) if no such application is made or the claim pursuant to such application is not registered, shall vest, upon the beginning of such further term, in the person or entity that was the proprietor of the copyright as of the last day of the original term of copyright.
+
+            (B)
+
+             At the expiration of the original term of copyright in a work specified in paragraph (1)(C) of this subsection, the copyright shall endure for a renewed and extended further term of 67 years, which—
+
+                (i) if an application to register a claim to such further term has been made to the Copyright Office within 1 year before the expiration of the original term of copyright, and the claim is registered, shall vest, upon the beginning of such further term, in any person who is entitled under paragraph (1)(C) to the renewal and extension of the copyright at the time the application is made; or
+
+                (ii) if no such application is made or the claim pursuant to such application is not registered, shall vest, upon the beginning of such further term, in any person entitled under paragraph (1)(C), as of the last day of the original term of copyright, to the renewal and extension of the copyright.
+
+        (3)
+
+            (A)
+
+             An application to register a claim to the renewed and extended term of copyright in a work may be made to the Copyright Office—
+
+                (i) within 1 year before the expiration of the original term of copyright by any person entitled under paragraph (1)(B) or (C) to such further term of 67 years; and
+
+                (ii) at any time during the renewed and extended term by any person in whom such further term vested, under paragraph (2)(A) or (B), or by any successor or assign of such person, if the application is made in the name of such person.
+
+            (B) Such an application is not a condition of the renewal and extension of the copyright in a work for a further term of 67 years.
+
+        (4)
+
+            (A) If an application to register a claim to the renewed and extended term of copyright in a work is not made within 1 year before the expiration of the original term of copyright in a work, or if the claim pursuant to such application is not registered, then a derivative work prepared under authority of a grant of a transfer or license of the copyright that is made before the expiration of the original term of copyright may continue to be used under the terms of the grant during the renewed and extended term of copyright without infringing the copyright, except that such use does not extend to the preparation during such renewed and extended term of other derivative works based upon the copyrighted work covered by such grant.
+
+            (B) If an application to register a claim to the renewed and extended term of copyright in a work is made within 1 year before its expiration, and the claim is registered, the certificate of such registration shall constitute prima facie evidence as to the validity of the copyright during its renewed and extended term and of the facts stated in the certificate. The evidentiary weight to be accorded the certificates of a registration of a renewed and extended term of copyright made after the end of that 1-year period shall be within the discretion of the court.
+
+    (b)  Copyrights in Their Renewal Term at the Time of the Effective Date of the Sonny Bono Copyright Term Extension Act  .—
+
+    Any copyright still in its renewal term at the time that the Sonny Bono Copyright Term Extension Act becomes effective shall have a copyright term of 95 years from the date copyright was originally secured.
+
+    (c)  Termination of Transfers and Licenses Covering Extended Renewal Term  .—
+
+    In the case of any copyright subsisting in either its first or renewal term on January 1, 1978, other than a copyright in a work made for hire, the exclusive or nonexclusive grant of a transfer or license of the renewal copyright or any right under it, executed before January 1, 1978, by any of the persons designated by subsection (a)(1)(C) of this section, otherwise than by will, is subject to termination under the following conditions:
+
+        (1) In the case of a grant executed by a person or persons other than the author, termination of the grant may be effected by the surviving person or persons who executed it. In the case of a grant executed by one or more of the authors of the work, termination of the grant may be effected, to the extent of a particular author’s share in the ownership of the renewal copyright, by the author who executed it or, if such author is dead, by the person or persons who, under clause (2) of this subsection, own and are entitled to exercise a total of more than one-half of that author’s termination interest.
+
+        (2)
+
+         Where an author is dead, his or her termination interest is owned, and may be exercised, as follows:
+
+            (A) The widow or widower owns the author’s entire termination interest unless there are any surviving children or grandchildren of the author, in which case the widow or widower owns one-half of the author’s interest.
+
+            (B) The author’s surviving children, and the surviving children of any dead child of the author, own the author’s entire termination interest unless there is a widow or widower, in which case the ownership of one-half of the author’s interest is divided among them.
+
+            (C) The rights of the author’s children and grandchildren are in all cases divided among them and exercised on a per stirpes basis according to the number of such author’s children represented; the share of the children of a dead child in a termination interest can be exercised only by the action of a majority of them.
+
+            (D) In the event that the author’s widow or widower, children, and grandchildren are not living, the author’s executor, administrator, personal representative, or trustee shall own the author’s entire termination interest.
+
+        (3) Termination of the grant may be effected at any time during a period of five years beginning at the end of fifty-six years from the date copyright was originally secured, or beginning on January 1, 1978, whichever is later.
+
+        (4)
+
+         The termination shall be effected by serving an advance notice in writing upon the grantee or the grantee’s successor in title. In the case of a grant executed by a person or persons other than the author, the notice shall be signed by all of those entitled to terminate the grant under clause (1) of this subsection, or by their duly authorized agents. In the case of a grant executed by one or more of the authors of the work, the notice as to any one author’s share shall be signed by that author or his or her duly authorized agent or, if that author is dead, by the number and proportion of the owners of his or her termination interest required under clauses (1) and (2) of this subsection, or by their duly authorized agents.
+
+            (A) The notice shall state the effective date of the termination, which shall fall within the five-year period specified by clause (3) of this subsection, or, in the case of a termination under subsection (d), within the five-year period specified by subsection (d)(2), and the notice shall be served not less than two or more than ten years before that date. A copy of the notice shall be recorded in the Copyright Office before the effective date of termination, as a condition to its taking effect.
+
+            (B) The notice shall comply, in form, content, and manner of service, with requirements that the Register of Copyrights shall prescribe by regulation.
+
+        (5) Termination of the grant may be effected notwithstanding any agreement to the contrary, including an agreement to make a will or to make any future grant.
+
+        (6)
+
+         In the case of a grant executed by a person or persons other than the author, all rights under this title that were covered by the terminated grant revert, upon the effective date of termination, to all of those entitled to terminate the grant under clause (1) of this subsection. In the case of a grant executed by one or more of the authors of the work, all of a particular author’s rights under this title that were covered by the terminated grant revert, upon the effective date of termination, to that author or, if that author is dead, to the persons owning his or her termination interest under clause (2) of this subsection, including those owners who did not join in signing the notice of termination under clause (4) of this subsection. In all cases the reversion of rights is subject to the following limitations:
+
+            (A) A derivative work prepared under authority of the grant before its termination may continue to be utilized under the terms of the grant after its termination, but this privilege does not extend to the preparation after the termination of other derivative works based upon the copyrighted work covered by the terminated grant.
+
+            (B) The future rights that will revert upon termination of the grant become vested on the date the notice of termination has been served as provided by clause (4) of this subsection.
+
+            (C) Where the author’s rights revert to two or more persons under clause (2) of this subsection, they shall vest in those persons in the proportionate shares provided by that clause. In such a case, and subject to the provisions of subclause (D) of this clause, a further grant, or agreement to make a further grant, of a particular author’s share with respect to any right covered by a terminated grant is valid only if it is signed by the same number and proportion of the owners, in whom the right has vested under this clause, as are required to terminate the grant under clause (2) of this subsection. Such further grant or agreement is effective with respect to all of the persons in whom the right it covers has vested under this subclause, including those who did not join in signing it. If any person dies after rights under a terminated grant have vested in him or her, that person’s legal representatives, legatees, or heirs at law represent him or her for purposes of this subclause.
+
+            (D) A further grant, or agreement to make a further grant, of any right covered by a terminated grant is valid only if it is made after the effective date of the termination. As an exception, however, an agreement for such a further grant may be made between the author or any of the persons provided by the first sentence of clause (6) of this subsection, or between the persons provided by subclause (C) of this clause, and the original grantee or such grantee’s successor in title, after the notice of termination has been served as provided by clause (4) of this subsection.
+
+            (E) Termination of a grant under this subsection affects only those rights covered by the grant that arise under this title, and in no way affects rights arising under any other Federal, State, or foreign laws.
+
+            (F) Unless and until termination is effected under this subsection, the grant, if it does not provide otherwise, continues in effect for the remainder of the extended renewal term.
+
+    (d)  Termination Rights Provided in Subsection  (c)  Which Have Expired on or Before the Effective Date of the Sonny Bono Copyright Term Extension Act  .—
+
+    In the case of any copyright other than a work made for hire, subsisting in its renewal term on the effective date of the Sonny Bono Copyright Term Extension Act for which the termination right provided in subsection (c) has expired by such date, where the author or owner of the termination right has not previously exercised such termination right, the exclusive or nonexclusive grant of a transfer or license of the renewal copyright or any right under it, executed before January 1, 1978, by any of the persons designated in subsection (a)(1)(C) of this section, other than by will, is subject to termination under the following conditions:
+
+        (1) The conditions specified in subsections (c)(1), (2), (4), (5), and (6) of this section apply to terminations of the last 20 years of copyright term as provided by the amendments made by the Sonny Bono Copyright Term Extension Act.
+
+        (2) Termination of the grant may be effected at any time during a period of 5 years beginning at the end of 75 years from the date copyright was originally secured.
+
+(Pub. L. 94–553, title I, § 101, Oct. 19, 1976, 90 Stat. 2573; Pub. L. 102–307, title I, § 102(a), (d), June 26, 1992, 106 Stat. 264, 266; Pub. L. 105–80, § 12(a)(9), Nov. 13, 1997, 111 Stat. 1535; Pub. L. 105–298, title I, §§ 102(d)(1), 103, Oct. 27, 1998, 112 Stat. 2827, 2829; Pub. L. 107–273, div. C, title III, § 13210(10), Nov. 2, 2002, 116 Stat. 1910.)
+
+ Historical and Revision Notes
+
+ house report no. 94–1476
+
+    The arguments in favor of lengthening the duration of copyright apply to subsisting as well as future copyrights. The bill’s basic approach is to increase the present 56-year term to 75 years in the case of copyrights subsisting in both their first and their renewal terms.
+
+    Copyrights in Their First Term. Subsection (a) of section 304 reenacts and preserves the renewal provision, now in Section 24 of the statute \[section 24 of former title 17\], for all of the works presently in their first 28-year term. A great many of the present expectancies in these cases are the subject of existing contracts, and it would be unfair and immensely confusing to cut off or alter these interests. Renewal registration will be required during the 28th year of the copyright but the length of the renewal term will be increased from 28 to 47 years.
+
+    Although the bill preserves the language of the present renewal provision without any change in substance, the Committee intends that the reference to a “posthumous work” in this section has the meaning given to it in Bartok v. Boosey & Hawkes, Inc., 523 F.2d 941 (2d Cir. 1975)—one as to which no copyright assignment or other contract for exploitation of the work has occurred during an author’s lifetime, rather than one which is simply first published after the author’s death.
+
+    Copyrights in Their Renewal Term. Renewed copyrights that are subsisting in their second term at any time during the period between December 31, 1976, and December 31, 1977, inclusive, would be extended under section 304(b) to run for a total of 75 years. This provision would add another 19 years to the duration of any renewed copyright whose second term started during the 28 years immediately preceding the effective date of the act (January 1, 1978). In addition, it would extend by varying lesser amounts the duration of renewal copyrights already extended under Public Laws 87–668, 89–142, 90–141, 90–416, 91–147, 91–555, 92–170, 92–566, and 93–573, all of which would otherwise expire on December 31, 1976. The subsection would also extend the duration of renewal copyrights whose second 28-year term is scheduled to expire during 1977. In none of these cases, however, would the total terms of copyright for the work be longer than 75 years.
+
+    Subsection (b) also covers the special situation of a subsisting first-term copyright that becomes eligible for renewal registration during the year before the act comes into effect. If a renewal registration is not made before the effective date \[Jan. 1, 1978\], the case is governed by the provisions of section 304(a) \[subsec. (a) of this section\]. If a renewal registration is made during the year before the new law takes effect, however, the copyright would be treated as if it were already subsisting in its second term and would be extended to the full period of 75 years without the need for further renewal.
+
+    Termination of Grants Covering Extended Term. An issue underlying the 19-year extension of renewal terms under both subsections (a) and (b) of section 304 \[subsecs. (a) and (b) of this section\] is whether, in a case where their rights have already been transferred, the author or the dependents of the author should be given a chance to benefit from the extended term. The arguments for granting rights of termination are even more persuasive under section 304 than they are under section 203; the extended term represents a completely new property right, and there are strong reasons for giving the author, who is the fundamental beneficiary of copyright under the Constitution, an opportunity to share in it.
+
+    Subsection (c) of section 304 is a close but not exact counterpart of section 203. In the case of either a first-term or renewal copyright already subsisting when the new statute becomes effective \[Jan. 1, 1978\], any grant of rights covering the renewal copyright in the work, executed before the effective date \[Jan. 1, 1978\], may be terminated under conditions and limitations similar to those provided in section 203. Except for transfers and licenses covering renewal copyrights already extended under Public Laws 87–668, 89–142, 90–141, 90–416, 91–147, 91–555, 92–170, 92–566, and 93–573, which would become subject to termination immediately upon the coming into effect of the revised law, the 5-year period during which termination could be made effective would start 56 years after copyright was originally secured.
+
+    The bill distinguishes between the persons who can terminate a grant under section 203 and those entitled to terminate a grant covering an extended term under section 304. Instead of being limited to transfers and licenses executed by the author, the right of termination under section 304(c) also extends to grants executed by those beneficiaries of the author who can claim renewal under the present law: his or her widow or widower, children, executors, or next of kin.
+
+    There is good reason for this difference. Under section 203, an author’s widow or widower and children are given rights of termination if the author is dead, but these rights apply only to grants by the author, and any effort by a widow, widower, or child to transfer contingent future interests under a termination would be ineffective. In contrast, under the present renewal provisions, any statutory beneficiary of the author can make a valid transfer or license of future renewal rights, which is completely binding if the author is dead and the person who executed the grant turns out to be the proper renewal claimant. Because of this, a great many contingent transfers of future renewal rights have been obtained from widows, widowers, children, and next of kin, and a substantial number of these will be binding. After the present 28-year renewal period has ended, a statutory beneficiary who has signed a disadvantageous grant of this sort should have the opportunity to reclaim the extended term.
+
+    As explained above in connection with section 203, the bill adopts the principle that, where a transfer or license by the author is involved, termination may be effected by a per stirpes majority of those entitled to terminate, and this principle also applies to the ownership of rights under a termination and to the making of further grants of reverted rights. In general, this principle has also been adopted with respect to the termination of rights under an extended renewal copyright in section 304, but with several differences made necessary by the differences between the legal status of transfers and licenses made after the effective date of the new law \[Jan. 1, 1978\] (governed by section 203) and that of grants of renewal rights made earlier and governed by section 304(c). The following are the most important distinctions between the termination rights under the two sections:
+
+    1. Joint Authorship.—Under section 304, a grant of renewal rights executed by joint authors during the first term of copyright would be effective only as to those who were living at the time of renewal; where any of them are dead, their statutory beneficiaries are entitled to claim the renewal independently as a new estate. It would therefore be inappropriate to impose a requirement of majority action with respect to transfers executed by two or more joint authors.
+
+    2. Grants Not Executed by Author.—Section 304(c) adopts the majority principle underlying the amendments of section 203 \[section 203 of this title\] with respect to the termination rights of a dead author’s widow or widower and children. There is much less reason, as a matter of policy, to apply this principle in the case of transfers and licenses of renewal rights executed under the present law by the author’s widow, widower, children, executors, or next of kin, and the practical arguments against doing so are conclusive. It is not clear how the shares of a class of renewal beneficiaries are to be divided under the existing law, and greater difficulties would be presented if any attempt were made to apply the majority principle to further beneficiaries in cases where one or more of the renewal beneficiaries are dead. Therefore, where the grant was executed by a person or persons other than the author, termination can be effected only by the unanimous action of the survivors of those who executed it.
+
+    3. Further Grants.—The reason against adopting a principle of majority action with respect to the right to terminate grants by joint authors and grants not executed by the author apply equally with respect to the right to make further grants under section 304(c). The requirement for majority action in clause (6)(C) is therefore confined to cases where the rights under a grant by the author have reverted to his or her widow or widower, or children, or both. Where the extended term reverts to joint authors or to a class of renewal beneficiaries who have joined in executing a grant, their rights would be governed by the general rules of tenancy in common; each coowner would have an independent right to sell his share, or to use or license the work subject to an accounting.
+
+    Nothing contained in this section or elsewhere in this legislation is intended to extend the duration of any license, transfer, or assignment made for a period of less than fifty-six years. If, for example, an agreement provides an earlier termination date or lesser duration, or if it allows the author the right of cancelling or terminating the agreement under certain circumstances, the duration is governed by the agreement. Likewise, nothing in this section or legislation is intended to change the existing state of the law of contracts concerning the circumstances in which an author may terminate a license, transfer or assignment.
+
+    Section 304(c)(6)(E) provides that, unless and until termination is effected under this section, the grant, “if it does not provide otherwise,” continues for the term of copyright. This section means that, if the agreement does not contain provisions specifying its term or duration, and the author has not terminated the agreement under this section, the agreement continues for the term of the copyright, subject to any right of termination under circumstances which may be specified therein. If, however, an agreement does contain provisions governing its duration—for example, a term of sixty years—and the author has not exercised his or her right of termination under the statute, the agreement will continue according to its terms—in this example, for only sixty years. The quoted language is not to be construed as requiring agreements to reserve the right of termination.
+
+ References in Text
+
+    The Sonny Bono Copyright Term Extension Act, referred to in subsecs. (b) and (d), is title I of Pub. L. 105–298, Oct. 27, 1998, 112 Stat. 2827. The effective date of the Act is the date of enactment of Pub. L. 105–298, which was approved Oct. 27, 1998. For complete classification of this Act to the Code, see Short Title of 1998 Amendment note set out under section 101 of this title and Tables.
+
+ Amendments
+
+    2002—Subsec. (c)(2)(A) to (C). Pub. L. 107–273, in subpars. (A) to (C), substituted “The” for “the” and, in subpars. (A) and (B), substituted period for semicolon at end.
+
+    1998—Subsec. (a)(1)(B), (C). Pub. L. 105–298, § 102(d)(1)(A)(i), substituted “67” for “47” in concluding provisions.
+
+    Subsec. (a)(2)(A), (B). Pub. L. 105–298, § 102(d)(1)(A)(ii), substituted “67” for “47” in introductory provisions.
+
+    Subsec. (a)(3)(A)(i), (B). Pub. L. 105–298, § 102(d)(1)(A)(iii), substituted “67” for “47”.
+
+    Subsec. (b). Pub. L. 105–298, § 102(d)(1)(B), amended heading and text of subsec. (b) generally. Prior to amendment, text read as follows: “The duration of any copyright, the renewal term of which is subsisting at any time between December 31, 1976, and December 31, 1977, inclusive, or for which renewal registration is made between December 31, 1976, and December 31, 1977, inclusive, is extended to endure for a term of seventy-five years from the date copyright was originally secured.”
+
+    Subsec. (c)(2). Pub. L. 105–298, § 103(1), struck out “by his widow or her widower and his or her children or grandchildren” after “exercised,” in introductory provisions.
+
+    Subsec. (c)(2)(D). Pub. L. 105–298, § 103(2), added subpar. (D).
+
+    Subsec. (c)(4)(A). Pub. L. 105–298, § 102(d)(1)(C), inserted “or, in the case of a termination under subsection (d), within the five-year period specified by subsection (d)(2),” before “and the notice”.
+
+    Subsec. (d). Pub. L. 105–298, § 102(d)(1)(D), added subsec. (d).
+
+    1997—Subsec. (c). Pub. L. 105–80 substituted “subsection (a)(1)(C)” for “the subsection (a)(1)(C)” in introductory provisions.
+
+    1992—Subsec. (a). Pub. L. 102–307, § 102(a), amended subsec. (a) generally. Prior to amendment, subsec. (a) read as follows: “Copyrights in Their First Term on January 1, 1978.—Any copyright, the first term of which is subsisting on January 1, 1978, shall endure for twenty-eight years from the date it was originally secured: Provided, That in the case of any posthumous work or of any periodical, cyclopedic, or other composite work upon which the copyright was originally secured by the proprietor thereof, or of any work copyrighted by a corporate body (otherwise than as assignee or licensee of the individual author) or by an employer for whom such work is made for hire, the proprietor of such copyright shall be entitled to a renewal and extension of the copyright in such work for the further term of forty-seven years when application for such renewal and extension shall have been made to the Copyright Office and duly registered therein within one year prior to the expiration of the original term of copyright: And provided further, That in the case of any other copyrighted work, including a contribution by an individual author to a periodical or to a cyclopedic or other composite work, the author of such work, if still living, or the widow, widower, or children of the author, if the author be not living, or if such author, widow, widower, or children be not living, then the author’s executors, or in the absence of a will, his or her next of kin shall be entitled to a renewal and extension of the copyright in such work for a further term of forty-seven years when application for such renewal and extension shall have been made to the Copyright Office and duly registered therein within one year prior to the expiration of the original term of copyright: And provided further, That in default of the registration of such application for renewal and extension, the copyright in any work shall terminate at the expiration of twenty-eight years from the date copyright was originally secured.”
+
+    Subsec. (c). Pub. L. 102–307, § 102(d), substituted “subsection (a)(1)(C)” for “second proviso of subsection (a)” in introductory provisions.
+
+ Effective Date of 1992 Amendment
+
+    Amendment by Pub. L. 102–307 effective June 26, 1992, but applicable only to copyrights secured between January 1, 1964, and December 31, 1977, and not affecting court proceedings pending on June 26, 1992, with copyrights secured before January 1, 1964, governed by section 304(a) of this title as in effect on the day before June 26, 1992, except each reference to forty-seven years in such provisions deemed to be 67 years, see section 102(g) of Pub. L. 102–307, as amended, set out as a note under section 101 of this title.
+
+ Effective Date
+
+    Subsec. (b) of this section effective Oct. 19, 1976, see section 102 of Pub. L. 94–553, set out as a note preceding section 101 of this title.
+
+ Legal Effect of Renewal of Copyright Unchanged
+
+Pub. L. 102–307, title I, § 102(c), June 26, 1992, 106 Stat. 266, as amended by Pub. L. 105–298, title I, § 102(d)(2)(A), Oct. 27, 1998, 112 Stat. 2828, provided that:
+
+> “The renewal and extension of a copyright for a further term of 67 years provided for under paragraphs (1) and (2) of section 304(a) of title 17, United States Code\[,\] shall have the same effect with respect to any grant, before the effective date of the Sonny Bono Copyright Term Extension Act \[Oct. 27, 1998\], of a transfer or license of the further term as did the renewal of a copyright before the effective date of the Sonny Bono Copyright Term Extension Act under the law in effect at the time of such grant.”
+
+ Ad Interim Copyrights Subsisting or Capable of Being Secured Under Predecessor Provisions
+
+Pub. L. 94–553, title I, § 107, Oct. 19, 1976, 90 Stat. 2600, provided that:
+
+> “In the case of any work in which an ad interim copyright is subsisting or is capable of being secured on December 31, 1977, under section 22 of title 17 as it existed on that date, copyright protection is hereby extended to endure for the term or terms provided by section 304 of title 17 as amended by the first section of this Act \[this section\].”
+
+ Copyright Granted to “Science and Health with Key to the Scriptures” for Term of 75 Years
+
+    Private Law 92–60, Dec. 15, 1971, 85 Stat. 857, provided: “That, any provision of law to the contrary notwithstanding, copyright is hereby granted to the trustees under the will of Mary Baker Eddy, their successors, and assigns, in the work ‘Science and Health with Key to the Scriptures’ (entitled also in some editions ‘Science and Health’ or ‘Science and Health; with a Key to the Scriptures’), by Mary Baker Eddy, including all editions thereof in English and translation heretofore published, or hereafter published by or on behalf of said trustees, their successors or assigns, for a term of seventy-five years from the effective date of this Act \[Dec. 15, 1971\] or from the date of first publication, whichever is later. All copies of the protected work hereafter published are to bear notice of copyright, and all new editions hereafter published are to be registered in the Copyright Office, in accordance with the provisions of title 17 of the United States Code or any revision or recodification thereof. The copyright owner shall be entitled to all rights and remedies provided to copyright owners generally by law: Provided, however, That no liability shall attach under this Act for lawful uses made or acts done prior to the effective date of this Act in connection with said work, or in respect to the continuance for one year subsequent to such date of any business undertaking or enterprise lawfully undertaken prior to such date involving expenditure or contractual obligation in connection with the exploitation, production, reproduction or circulation of said work. This Act shall be effective upon enactment.”
+
+ Extension of Renewal Terms Under Prior Law
+
+    Pub. L. 93–573, title I, § 104, Dec. 31, 1974, 88 Stat. 1873, provided that in any case in which the renewal term of a copyright subsisting in any work on Dec. 31, 1974, or the term thereof as extended by Public Law 87–668, by Public Law 89–142, by Public Law 90–141, by Public Law 90–416, by Public Law 91–417, by Public Law 91–555, by Public Law 92–170, or by Public Law 92–556 (or by all or certain of said laws) \[set out below\], would expire prior to Dec. 31, 1976, such term was continued until Dec. 31, 1976.
+
+    Pub. L. 92–566, Oct. 25, 1972, 86 Stat. 1181, provided that in any case in which the renewal term of a copyright subsisting in any work on Oct. 25, 1972, or the term thereof as extended by Public Law 87–668, by Public Law 89–142, by Public Law 90–141, by Public Law 90–416, by Public Law 91–147, by Public Law 91–555, or by Public Law 92–170 (or by all or certain of said laws) \[set out below\], would expire prior to Dec. 31, 1974, such term was continued until Dec. 31, 1974.
+
+    Pub. L. 92–170, Nov. 24, 1971, 85 Stat. 490, provided that in any case in which the renewal term of a copyright subsisting in any work on Nov. 24, 1971, or the term thereof as extended by Public Law 87–668, by Public Law 89–142, by Public Law 90–141, by Public Law 90–416, by Public Law 91–147, or by Public Law 91–555 (or by all or certain of said laws), would expire prior to Dec. 31, 1972, such term was continued until Dec. 31, 1972.
+
+    Pub. L. 91–555, Dec. 17, 1970, 84 Stat. 1441, provided that in any case in which the renewal term of a copyright subsisting in any work on Dec. 17, 1970, or the term thereof as extended by Public Law 87–668, by Public Law 89–442 \[89–142\], by Public Law 90–141, by Public Law 90–416, or by Public Law 91–147 (or by all or certain of said laws) \[set out below\], would expire prior to Dec. 31, 1971, such term was continued until Dec. 31, 1971.
+
+    Pub. L. 91–147, Dec. 16, 1969, 83 Stat. 360, provided that in any case in which the renewal term of a copyright subsisting in any work on Dec. 16, 1969, or the term thereof as extended by Public Law 87–668, by Public Law 89–142, by Public Law 90–141, or by Public Law 90–416 (or by all or certain of said laws) \[set out below\], would expire prior to Dec. 31, 1970, such term was continued until Dec. 31, 1970.
+
+    Pub. L. 90–416, July 23, 1968, 82 Stat. 397, provided that in any case in which the renewal term of a copyright subsisting in any work on July 23, 1968, or the term thereof as extended by Public Law 87–668, by Public Law 89–142, or by Public Law 90–141 (or by all or certain of said laws) \[set out below\], would expire prior to Dec. 31, 1969, such term was continued until Dec. 31, 1969.
+
+    Pub. L. 90–141, Nov. 16, 1967, 81 Stat. 464, provided that in any case in which the renewal term of a copyright subsisting in any work on Nov. 16, 1967, or the term thereof as extended by Public Law 87–668, or by Public Law 89–142 (or by either or both of said laws) \[set out below\], would expire prior to Dec. 31, 1968, such term was continued until Dec. 31, 1968.
+
+    Pub. L. 89–142, Aug. 28, 1965, 79 Stat. 581, provided that in any case in which the renewal term of a copyright subsisting in any work on Aug. 28, 1965, or the term thereof as extended by Public Law 87–668 \[set out below\], would expire prior to Dec. 31, 1967, such term was continued until Dec. 31, 1967.
+
+    Pub. L. 87–668, Sept. 19, 1962, 76 Stat. 555, provided that in any case in which the renewal term of a copyright subsisting in any work on Sept. 19, 1962, would expire prior to Dec. 31, 1965, such term was continued until Dec. 31, 1965.
+
+================================================================================
+
+§ 305. Duration of copyright: Terminal date
+
+    All terms of copyright provided by sections 302 through 304 run to the end of the calendar year in which they would otherwise expire.
+
+(Pub. L. 94–553, title I, § 101, Oct. 19, 1976, 90 Stat. 2576.)
+
+ Historical and Revision Notes
+
+ house report no. 94–1476
+
+    Under section 305, which has its counterpart in the laws of most foreign countries, the term of copyright protection for a work extends through December 31 of the year in which the term would otherwise have expired. This will make the duration of copyright much easier to compute, since it will be enough to determine the year, rather than the exact date, of the event from which the term is based.
+
+    Section 305 applies only to “terms of copyright provided by sections 302 through 304,” which are the sections dealing with duration of copyright. It therefore has no effect on the other time periods specified in the bill; and, since they do not involve “terms of copyright,” the periods provided in section 304(c) with respect to termination of grants are not affected by section 305.
+
+    The terminal date section would change the duration of subsisting copyrights under section 304 by extending the total terms of protection under subsections (a) and (b) to the end of the 75th year from the date copyright was secured. A copyright subsisting in its first term on the effective date of the act \[Jan. 1, 1978\] would run through December 31 of the 28th year and would then expire unless renewed. Since all copyright terms under the bill expire on December 31, and since section 304(a) requires that renewal be made “within one year prior to the expiration of the original term of copyright,” the period for renewal registration in all cases will run from December 31 through December 31.
+
+    A special situation arises with respect to subsisting copyrights whose first 28-year term expires during the first year after the act comes into effect. As already explained in connection with section 304(b), if a renewal registration for a copyright of this sort is made before the effective date \[Jan. 1, 1978\], the total term is extended to 75 years without the need for a further renewal registration. But, if renewal has not yet been made when the act becomes effective \[Jan. 1, 1978\], the period for renewal registration may in some cases be extended. If, as the bill provides, the act becomes effective on January 1, 1978, a copyright that was originally secured on September 1, 1950, could have been renewed by virtue of the present statute between September 1, 1977, and December 31, 1977; if not, it can still be renewed under section 304(a) of the new act between January 1, 1978, and December 31, 1978.

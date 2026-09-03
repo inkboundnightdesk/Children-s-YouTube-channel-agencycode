@@ -1,0 +1,24 @@
+{
+  "generated": "2026-09-03",
+  "note": "SHA-256 lets the 90-day refresh detect whether reference law changed under you.",
+  "documents": [
+    {
+      "file": "compliance/source_text/coppa-statute-15-usc-6501-6506.txt",
+      "citation": "15 U.S.C. \u00a7\u00a7 6501-6506",
+      "bytes": 27587,
+      "sha256": "1257faf72d4290c9a69062403b29255f1a60a51cf6ee3b8912ac38c1c6775370"
+    },
+    {
+      "file": "compliance/source_text/coppa-rule-16-cfr-part-312.txt",
+      "citation": "16 C.F.R. Part 312",
+      "bytes": 46342,
+      "sha256": "4874cca34c253cbd4e506912ae638558a1b2e02e9c565ca9b5d9d02668157512"
+    },
+    {
+      "file": "compliance/source_text/copyright-17-usc-102-106-302-305.txt",
+      "citation": "17 U.S.C. \u00a7\u00a7 102, 106, 302-305",
+      "bytes": 109573,
+      "sha256": "d25ba3fe7652ca9da0170bb378846a66077b9c438ede97f07a3d04d110a9eeec"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "_comment": "Shape of a publish package's metadata block. scripts/pipeline.py --package produces this; compliance_gate.check_publish_package() validates it. Fields marked REQUIRED-TRUE / REQUIRED-FALSE are non-negotiables and are checked in software.",
+
+  "title": "",
+  "_title_rules": "<=100 chars, <=60 to avoid feed truncation. Honest description of the video. No clickbait, no curiosity gap, no ALL CAPS, no CTA, no third-party brand.",
+
+  "description": "",
+  "_description_rules": "No links. No email addresses. No contact routes. No call to action. Credit the public-domain source of the rhyme - good practice, and useful evidence if a Content ID claim lands.",
+
+  "thumbnail_text": "",
+  "_thumbnail_rules": "<=4 words. Legible at phone size. Honest about content. No third-party characters or trade dress.",
+
+  "made_for_kids": true,
+  "_nn1": "REQUIRED-TRUE. NN-1. Every video, no exceptions. Verify on the review screen after setting it.",
+
+  "comments_disabled": true,
+  "_nn2_comments": "REQUIRED-TRUE. Automatic under MFK - declared here so the upload checklist can be verified against the package.",
+
+  "personalized_ads": false,
+  "_nn2_ads": "REQUIRED-FALSE. Contextual advertising only. Model channel revenue on that, not a general-audience CPM.",
+
+  "live_chat": false,
+  "_nn2_chat": "REQUIRED-FALSE.",
+
+  "notifications": false,
+  "_nn2_notifications": "REQUIRED-FALSE.",
+
+  "altered_content_disclosed": false,
+  "_nn7": "REQUIRED-TRUE when visual_style is photorealistic; false for stylised/cartoon. The kids setting is unconditional; only this label is conditional. If genuinely unclear, disclose.",
+
+  "category": "Education",
+  "language": "en",
+  "captions": "en",
+  "tags": [],
+  "_tag_rules": "Descriptive, not stuffed. Never a third-party brand or channel name.",
+
+  "end_screens": false,
+  "cards": false,
+  "_unavailable_on_mfk": "Both are unavailable on Made-for-Kids content. Declared false so nothing downstream expects them."
+}
