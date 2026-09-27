@@ -13,17 +13,21 @@ WHAT THIS IS
 
 
 --------------------------------------------------------------------------------
-STEP 1 - PUT THE AGENT RULES INTO GROK BOT
+STEP 1 - LOAD THE AGENT RULES INTO THE OPERATOR
 --------------------------------------------------------------------------------
 
   Open:   AGENT_RULES.md
+          CLAUDE_PROJECT_PROMPT.md   (ready to paste)
+          CLAUDE.md                  (Claude Project / Claude Code)
 
-  Copy the whole file and paste it into Grok Bot as its SYSTEM PROMPT.
+  Preferred operator: Grok Bot, if a working Cursor login exists.
+  If Cursor is banned or Grok Bot will not sign in: use Claude.
 
-  That single file is the agent's operating contract: the seven non-negotiable
-  rules, the five operating rules, and how to refuse a request properly.
-  It is the only file that goes INSIDE Grok. Everything else is what Grok
-  works against.
+  Paste CLAUDE_PROJECT_PROMPT.md into a Claude Project (Instructions),
+  or open this repo in Claude Code so it reads CLAUDE.md.
+
+  AGENT_RULES.md is the contract. Claude/Grok only sit in the seat.
+  Neither tool uploads. Neither tool is the human reviewer.
 
 
 --------------------------------------------------------------------------------
@@ -46,17 +50,21 @@ STEP 3 - MAKE ONE VIDEO END TO END
 
   The short version:
 
+      bash scripts/first_video.sh
+      # or:
       python3 scripts/rhyme_generator.py --list
-      python3 scripts/pipeline.py --ref VID-001 --rhyme hickory_dickory --format long
+      python3 scripts/pipeline.py --ref VID-2026-001 --rhyme hickory_dickory --format long --seed 3
+
+  Full command list: FIRST_VIDEO.md
 
       ... the pipeline STOPS at the human review gate ...
-      ... generate frames in Higgsfield from build/VID-001/video_prompts.json
+      ... generate frames in Higgsfield from build/VID-2026-001/video_prompts.json
       ... review 100% of them against video/frame_review_checklist.md
       ... complete review/safety_checklist.md
-      ... copy review/gate_signoff.template.json -> build/VID-001/signoff.json
+      ... copy review/gate_signoff.template.json -> build/VID-2026-001/signoff.json
 
-      python3 scripts/pipeline.py --ref VID-001 --package
-      python3 scripts/thumbnail_generator.py --script build/VID-001/script.json
+      python3 scripts/pipeline.py --ref VID-2026-001 --package
+      python3 scripts/thumbnail_generator.py --script build/VID-2026-001/script.json
 
   Then a human uploads, following publishing/youtube_upload_checklist.md
 

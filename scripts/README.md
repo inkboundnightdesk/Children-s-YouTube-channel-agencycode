@@ -12,6 +12,7 @@ before writing it. **A script that generates without gating is a bug.**
 | [`batch_ideas.py`](batch_ideas.py) | Batch planning with anti-duplication and volume caps applied up front |
 | [`audit_log.py`](audit_log.py) | Append-only decision log. Refuses an empty reason. |
 | [`rhyme_library.json`](rhyme_library.json) | Verified public-domain rhymes. `pd_verified: false` means the generator refuses it. |
+| [`first_video.sh`](first_video.sh) | Gates 0–2 for one test video, then stops. Never publishes. |
 
 **Python 3.8+, standard library only.** No `pip install`, no virtualenv, no network. Clone and run.
 
