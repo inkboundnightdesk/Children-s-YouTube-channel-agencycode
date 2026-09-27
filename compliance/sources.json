@@ -1,0 +1,59 @@
+{
+  "_comment": "Catalog of sources the watcher checks. Government works may be fetched. Platform policy is hashed only — never mirrored into source_text/.",
+  "fetchable": [
+    {
+      "id": "coppa-rule",
+      "file": "coppa-rule-16-cfr-part-312.txt",
+      "citation": "16 C.F.R. Part 312",
+      "url": "https://www.ecfr.gov/api/versioner/v1/full/{today}/title-16.xml?part=312",
+      "format": "xml",
+      "note": "eCFR versioner API. {today} is ISO date."
+    },
+    {
+      "id": "coppa-statute",
+      "file": "coppa-statute-15-usc-6501-6506.txt",
+      "citation": "15 U.S.C. 6501-6506",
+      "url": "https://uscode.house.gov/view.xhtml?req=granuleid%3AUSC-prelim-title15-chapter91&edition=prelim",
+      "format": "html",
+      "note": "Office of the Law Revision Counsel, prelim edition."
+    },
+    {
+      "id": "copyright-duration",
+      "file": "copyright-17-usc-102-106-302-305.txt",
+      "citation": "17 U.S.C. 102, 106, 302-305",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title17&edition=prelim",
+      "format": "html",
+      "note": "Confirm 114/115 against a current official text before relying on music-license sections."
+    }
+  ],
+  "signals": [
+    {
+      "id": "fr-coppa-rule",
+      "topic": "Federal Register: COPPA Rule documents",
+      "url": "https://www.federalregister.gov/api/v1/documents.json?per_page=10&order=newest&conditions[term]=Children%27s+Online+Privacy+Protection+Rule"
+    },
+    {
+      "id": "fr-coppa-2025-final",
+      "topic": "Federal Register document 2025-05904 (2025 COPPA amendments)",
+      "url": "https://www.federalregister.gov/api/v1/documents/2025-05904.json"
+    }
+  ],
+  "read_at_source": [
+    ["YouTube: set channel/video audience", "https://support.google.com/youtube/answer/9527654"],
+    ["YouTube: determine if content is made for kids", "https://support.google.com/youtube/answer/9528076"],
+    ["YouTube: watching made-for-kids content", "https://support.google.com/youtube/answer/9632097"],
+    ["YouTube: ads on MFK content", "https://support.google.com/youtube/answer/9713557"],
+    ["YouTube: child safety policy", "https://support.google.com/youtube/answer/2801999"],
+    ["YouTube: quality principles for kids content", "https://support.google.com/youtube/answer/10774223"],
+    ["YouTube Kids content policies", "https://support.google.com/youtube/answer/10938174"],
+    ["YouTube: altered or synthetic content disclosure", "https://support.google.com/youtube/answer/14328491"],
+    ["YouTube API Developer Policies (III.J children)", "https://developers.google.com/youtube/terms/developer-policies"],
+    ["FTC: Children's Privacy hub", "https://www.ftc.gov/business-guidance/privacy-security/childrens-privacy"],
+    ["FTC: Six-Step COPPA Compliance Plan", "https://www.ftc.gov/business-guidance/resources/childrens-online-privacy-protection-rule-six-step-compliance-plan-your-business"],
+    ["FTC: COPPA FAQs", "https://www.ftc.gov/business-guidance/resources/complying-coppa-frequently-asked-questions"],
+    ["FTC: YouTube channel owners guidance", "https://www.ftc.gov/business-guidance/blog/2019/11/youtube-channel-owners-your-content-directed-children"],
+    ["FTC: Disney/YouTube labeling lesson (2025)", "https://www.ftc.gov/business-guidance/blog/2025/09/protecting-children-watching-youtube-videos-lessons-learned-ftcs-settlement-disney"],
+    ["Copyright Office: Circular 15a, duration", "https://www.copyright.gov/circs/circ15a.pdf"],
+    ["Copyright Office: public records / registration search", "https://www.copyright.gov/public-records/"]
+  ]
+}
